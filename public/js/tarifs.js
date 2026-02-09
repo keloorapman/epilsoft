@@ -1,4 +1,7 @@
+console.log('🔧 Tarifs.js loaded');
+
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('🔧 DOMContentLoaded event fired');
 
     /**
      * NOUVELLE FONCTION SIMPLIFIÉE POUR LES CARROUSELS
@@ -119,11 +122,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const genders = ['Femme','Homme'];
         let selOption = sessionsAndForfait[0], selGender = genders[0], selZone;
         const sessEl = document.getElementById('sgz-sessions'), genEl = document.getElementById('sgz-genders'), zoneEl = document.getElementById('sgz-zones'), zoneLabel = document.getElementById('sgz-zones-label'), instEl = document.getElementById('sgz-installments'), tblEl = document.getElementById('sgz-table');
+        console.log('🔧 Elements found:', { sessEl: !!sessEl, genEl: !!genEl, zoneEl: !!zoneEl, tblEl: !!tblEl });
         function makeBtns(container, items, selected, onSelect){ if (!container) return; container.innerHTML = ''; items.forEach(item => { const b = document.createElement('button'); b.innerText = item; b.className = 'sgz-btn'; if(item === selected) b.classList.add('selected'); b.onclick = () => { onSelect(item); }; container.appendChild(b); }); }
         function makeZones(){ if (!zoneEl || !individualZonesData[selGender]) return; zoneEl.innerHTML = ''; const currentGenderZones = Object.keys(individualZonesData[selGender]); if (!selZone || !currentGenderZones.includes(selZone)) { selZone = currentGenderZones[0]; } currentGenderZones.forEach(z => { const b = document.createElement('button'); b.innerText = z; b.className = 'sgz-btn sgz-zone-btn'; if(z === selZone) b.classList.add('selected'); b.onclick = () => { selZone = z; update(); }; zoneEl.appendChild(b); }); }
         function makeTable(){ let isForfaitMode = selOption === 'Forfaits', catData, tableTitle = 'Zones du corps'; if (isForfaitMode) { catData = forfaitsData[selGender] || {}; tableTitle = 'Forfaits Disponibles'; } else { catData = individualZonesData[selGender]?.[selZone] || {}; } if (!tblEl) return; tblEl.innerHTML = ''; const tHead = tblEl.createTHead(), headRow = tHead.insertRow(), thZone = document.createElement('th'); thZone.textContent = tableTitle; headRow.appendChild(thZone); const priceHeaderCell = document.createElement('th'); headRow.appendChild(priceHeaderCell); const tBody = tblEl.createTBody(); Object.entries(catData).forEach(([zoneName, vals]) => { if (zoneName.startsWith('__header_')) { const title = zoneName.replace('__header_', '').replace(/_/g, ' '), headerRow = tBody.insertRow(); headerRow.className = 'sgz-subheader'; const th = document.createElement('th'); th.colSpan = 2; th.textContent = title; headerRow.appendChild(th); return; } const tr = tBody.insertRow(); tr.insertCell().textContent = zoneName; const priceCell = tr.insertCell(); if (isForfaitMode) { priceHeaderCell.textContent = 'Prix à la séance'; priceCell.innerHTML = `<span class="price-small">${vals.unit !== undefined ? vals.unit : 'N/A'} €</span>`; } else { if (selOption === sessionsAndForfait[0]) { priceHeaderCell.textContent = 'Prix à la séance'; priceCell.innerHTML = `<span class="price-small">${vals.unit !== undefined ? vals.unit : 'N/A'} €</span>`; } else if (selOption === sessionsAndForfait[1]) { priceHeaderCell.textContent = 'Pack 5 séances (-25%)'; const perSessionText5 = vals.per5 !== undefined ? vals.per5.toFixed(2).replace('.',',') : 'N/A'; priceCell.innerHTML = `<span class="strike">${vals.total5 !== undefined ? vals.total5 : 'N/A'} €</span> <span class="price-large">${vals.total5disc !== undefined ? vals.total5disc.toFixed(2).replace('.', ',') : 'N/A'} €</span><small>(${perSessionText5} €/séance)</small>`; } else if (selOption === sessionsAndForfait[2]) { priceHeaderCell.textContent = 'Pack 8 séances (-35%)'; const perSessionText8 = vals.per8 !== undefined ? vals.per8.toFixed(2).replace('.',',') : 'N/A'; priceCell.innerHTML = `<span class="strike">${vals.total8 !== undefined ? vals.total8 : 'N/A'} €</span> <span class="price-large">${vals.total8disc !== undefined ? vals.total8disc.toFixed(2).replace('.', ',') : 'N/A'} €</span><small>(${perSessionText8} €/séance)</small>`; } } }); }
         function update(){ makeBtns(sessEl, sessionsAndForfait, selOption, v => { selOption = v; if (v !== 'Forfaits' && !selZone) { selZone = Object.keys(individualZonesData[selGender])[0]; } update(); }); if (selOption === 'Forfaits') { if(zoneEl) zoneEl.style.display = 'none'; if(zoneLabel) zoneLabel.style.display = 'none'; if(instEl) instEl.textContent = ''; } else { if(zoneEl) zoneEl.style.display = 'flex'; if(zoneLabel) zoneLabel.style.display = 'block'; makeZones(); if(instEl) { if (selOption === sessionsAndForfait[1] || selOption === sessionsAndForfait[2]) { instEl.textContent = '💳 Paiement possible en 2 ou 3 fois sans frais.'; } else { instEl.textContent = ' '; } } } makeBtns(genEl, genders, selGender, v => { selGender = v; selZone = Object.keys(individualZonesData[selGender])[0]; update(); }); makeTable(); }
-        if (sessEl) { update(); }
+        if (sessEl) {
+            console.log('🔧 Calling update() to populate pricing table');
+            update();
+        } else {
+            console.error('❌ Element #sgz-sessions not found! Pricing table will not work.');
+        }
     })();
 
 });
