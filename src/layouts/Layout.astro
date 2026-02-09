@@ -64,6 +64,10 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
   
   <!-- Preconnect pour performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/images/logo-banner-white.svg" as="image" type="image/svg+xml" />
 
   <!-- Trustindex Widget -->
   <script type="text/javascript" src="https://cdn.trustindex.io/loader.js" defer></script>
