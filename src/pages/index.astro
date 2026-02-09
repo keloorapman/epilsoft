@@ -213,7 +213,14 @@ const t = translations[lang];
               <!-- Laser Candela -->
               <div class="tech-item animate fade_up">
                 <div class="tech-image">
-                  <img src="/images/laser-Candela-epilation-laser.jpg" alt="Laser Candela Gentlease" width="284" height="300" />
+                  <img
+                    src="/images/laser-Candela-epilation-laser-small.jpg"
+                    srcset="/images/laser-Candela-epilation-laser-small.jpg 142w, /images/laser-Candela-epilation-laser.jpg 284w"
+                    sizes="(max-width: 768px) 142px, 284px"
+                    alt="Laser Candela Gentlease"
+                    width="284"
+                    height="300"
+                  />
                 </div>
                 <div class="tech-content">
                   <h3 class="tech-title">Laser Candela</h3>
@@ -269,7 +276,14 @@ const t = translations[lang];
       <div class="wrapper section-treatment">
         <div class="photo_texte coloration">
           <div class="photo">
-            <img src="/images/epilation-laser-visage-avant-apres-.jpg" alt="Épilation laser visage avant après" width="742" height="1112" />
+            <img
+              src="/images/epilation-laser-visage-avant-apres-small.jpg"
+              srcset="/images/epilation-laser-visage-avant-apres-small.jpg 371w, /images/epilation-laser-visage-avant-apres-.jpg 742w"
+              sizes="(max-width: 768px) 371px, 742px"
+              alt="Épilation laser visage avant après"
+              width="742"
+              height="1112"
+            />
           </div>
           <div class="bloc_shadow">
             <div class="animate fade_in">
@@ -2198,8 +2212,9 @@ const t = translations[lang];
 </style>
 
 <script>
-  // YouTube Facade - Load video on click
+  // All initialization in single DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
+    // YouTube Facade - Load video on click
     const youtubeFacade = document.getElementById('youtube-facade');
     const playButton = youtubeFacade?.querySelector('.youtube-play-button');
 
@@ -2217,10 +2232,8 @@ const t = translations[lang];
       youtubeFacade.innerHTML = '';
       youtubeFacade.appendChild(iframe);
     });
-  });
 
-  // Animation d'ouverture au chargement - Semeraro Style
-  document.addEventListener('DOMContentLoaded', () => {
+    // Animation d'ouverture au chargement - Semeraro Style
     const wrapper = document.querySelector('.page-wrapper');
 
     // Retirer start-anim au scroll et ajouter sticky
