@@ -319,6 +319,10 @@ const lang = 'fr';
 </main>
 
   <Footer lang={lang} />
+
+  <!-- Scripts must be inside LayoutMinimal slot -->
+  <script src="/js/tarifs.js" defer></script>
+  <script src="/js/page-animations.js" defer></script>
 </LayoutMinimal>
 
 <style is:global>
@@ -1103,7 +1107,3 @@ ANIMATIONS - STYLE SEMERARO
   }
 }
 </style>
-
-<script src="/js/tarifs.js" defer></script>
-<script src="/js/page-animations.js" defer></script>
-// Force rebuild
