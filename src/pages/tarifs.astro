@@ -4,6 +4,33 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const lang = 'fr';
+
+// Cloudinary configuration - REMPLACEZ 'VOTRE-CLOUD-NAME' par votre cloud name
+const CLOUDINARY_CLOUD_NAME = 'VOTRE-CLOUD-NAME';
+
+// Helper function to generate optimized Cloudinary URLs
+function cloudinaryImg(sourceUrl: string, width: number, height: number, quality = 'auto') {
+  const transformations = `w_${width},h_${height},c_scale,f_auto,q_${quality},dpr_auto`;
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/fetch/${transformations}/${sourceUrl}`;
+}
+
+// Image URLs
+const imgs = {
+  desktop: {
+    promo1: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/promo-epilation-laser-promo-50-aissellesmaillot.webp', 1190, 470),
+    promo2: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-50-pack-8-seances-Epaules-Contour-barbe.webp', 1190, 470),
+    promo3: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35.webp', 1190, 470),
+    promo4: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/Promo-epilation-laser-pack-8-seance.webp', 1190, 470),
+    promo5: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-Parrainage-epilation-laser-_-parrainez-gagnez.webp', 1190, 470),
+  },
+  mobile: {
+    pack1: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-femmes-_-50.webp', 412, 412),
+    pack2: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-hommes-_-50.webp', 412, 412),
+    pack3: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35-1.webp', 412, 412),
+    pack4: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/09/parrainage-epilation-laser-offre-1.webp', 412, 412),
+  },
+  consultation: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/02/Epilation-laser-Epilsoft-Premier-Rendez-vous.webp', 472, 472),
+};
 ---
 
 <LayoutMinimal
@@ -11,7 +38,7 @@ const lang = 'fr';
   description="Découvrez nos tarifs d'épilation laser. Pack 8 séances à -50%. Paiement en 2 ou 3 fois sans frais. Consultation gratuite incluse."
   lang={lang}
 >
-  <link slot="head" rel="preload" as="image" href="https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-femmes-_-50.webp" fetchpriority="high" media="(max-width: 600px)" />
+  <link slot="head" rel="preload" as="image" href={imgs.mobile.pack1} fetchpriority="high" media="(max-width: 600px)" />
 
   <Header lang={lang} />
 
@@ -28,31 +55,31 @@ const lang = 'fr';
             <div class="slider">
                 <div class="slides">
                     <div class="slide slide-desktop">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/promo-epilation-laser-promo-50-aissellesmaillot.webp" alt="Promotion Epilsoft : 8 séances d'épilation laser à -35%" width="1190" height="470" />
+                        <img src={imgs.desktop.promo1} alt="Promotion Epilsoft : 8 séances d'épilation laser à -35%" width="1190" height="470" />
                     </div>
                     <div class="slide slide-desktop">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-50-pack-8-seances-Epaules-Contour-barbe.webp" alt="Promotion Epilsoft : 5 séances d'épilation laser à -25%" width="1190" height="470" />
+                        <img src={imgs.desktop.promo2} alt="Promotion Epilsoft : 5 séances d'épilation laser à -25%" width="1190" height="470" />
                     </div>
                     <div class="slide slide-desktop">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35.webp" alt="Offre parrainage Epilsoft pour l'épilation laser" width="1190" height="470" />
+                        <img src={imgs.desktop.promo3} alt="Offre parrainage Epilsoft pour l'épilation laser" width="1190" height="470" />
                     </div>
                     <div class="slide slide-desktop">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Promo-epilation-laser-pack-8-seance.webp" alt="Offre parrainage Epilsoft pour l'épilation laser" width="1190" height="470" />
+                        <img src={imgs.desktop.promo4} alt="Offre parrainage Epilsoft pour l'épilation laser" width="1190" height="470" />
                     </div>
                     <div class="slide slide-desktop">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-Parrainage-epilation-laser-_-parrainez-gagnez.webp" alt="Promotion Epilsoft sur les forfaits d'épilation laser" width="1190" height="470" />
+                        <img src={imgs.desktop.promo5} alt="Promotion Epilsoft sur les forfaits d'épilation laser" width="1190" height="470" />
                     </div>
                     <div class="slide slide-mobile">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-femmes-_-50.webp" alt="Offre parrainage Epilsoft - vue mobile" width="1080" height="1080" fetchpriority="high" />
+                        <img src={imgs.mobile.pack1} alt="Offre parrainage Epilsoft - vue mobile" width="412" height="412" fetchpriority="high" />
                     </div>
                     <div class="slide slide-mobile">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-hommes-_-50.webp" alt="Promotion épilation laser visage - vue mobile" width="1080" height="1080" />
+                        <img src={imgs.mobile.pack2} alt="Promotion épilation laser visage - vue mobile" width="412" height="412" />
                     </div>
                     <div class="slide slide-mobile">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35-1.webp" alt="Promotion épilation laser maillot - vue mobile" width="1080" height="1080" />
+                        <img src={imgs.mobile.pack3} alt="Promotion épilation laser maillot - vue mobile" width="412" height="412" />
                     </div>
                     <div class="slide slide-mobile">
-                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/parrainage-epilation-laser-offre-1.webp" alt="Promotion épilation laser jambes complètes - vue mobile" width="1080" height="1080" />
+                        <img src={imgs.mobile.pack4} alt="Promotion épilation laser jambes complètes - vue mobile" width="412" height="412" />
                     </div>
                 </div>
             </div>
@@ -230,7 +257,7 @@ const lang = 'fr';
             <a href="https://epilsoft.be/rendez-vous/" class="btn-reserver">RÉSERVER</a>
         </div>
         <div class="image">
-            <img src="https://epilsoft.be/wp-content/uploads/2025/02/Epilation-laser-Epilsoft-Premier-Rendez-vous.webp"
+            <img src={imgs.consultation}
                  alt="Consultation gratuite pour l'épilation laser chez Epilsoft" width="472" height="472" />
         </div>
     </section>
