@@ -338,12 +338,14 @@ const currentLangCode = languages[lang].code;
   .lang .current {
     width: 35px;
     height: 35px;
-    line-height: 35px;
     border-radius: 50%;
     background: #8a7044;
     cursor: pointer;
     font-size: 12px;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .lang .other {
@@ -358,7 +360,9 @@ const currentLangCode = languages[lang].code;
   .lang .other a {
     width: 35px;
     height: 35px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background: #bfa477;
     color: #fff;
@@ -366,7 +370,6 @@ const currentLangCode = languages[lang].code;
     font-weight: 400;
     font-size: 11px;
     text-decoration: none;
-    line-height: 35px;
   }
 
   /* Language selector for mobile */
