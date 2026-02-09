@@ -80,7 +80,7 @@ const t = translations[lang];
           <!-- Slider photos -->
           <div class="slider">
             <div class="item">
-              <img src="/images/centres-epilation-laser-Bruxelles.jpg" alt="Centres Epilsoft Bruxelles" width="1064" height="864" />
+              <img src="/images/centres-epilation-laser-Bruxelles.jpg" alt="Centres Epilsoft Bruxelles" width="1064" height="864" fetchpriority="high" />
             </div>
           </div>
 
@@ -207,7 +207,7 @@ const t = translations[lang];
               <!-- Laser Candela -->
               <div class="tech-item animate fade_up">
                 <div class="tech-image">
-                  <img src="/images/laser-Candela-epilation-laser.webp" alt="Laser Candela Gentlease" width="600" height="634" />
+                  <img src="/images/laser-Candela-epilation-laser.jpg" alt="Laser Candela Gentlease" width="284" height="300" />
                 </div>
                 <div class="tech-content">
                   <h3 class="tech-title">Laser Candela</h3>
@@ -263,7 +263,7 @@ const t = translations[lang];
       <div class="wrapper section-treatment">
         <div class="photo_texte coloration">
           <div class="photo">
-            <img src="/images/epilation-laser-visage-avant-apres-.webp" alt="Épilation laser visage avant après" width="1024" height="1536" />
+            <img src="/images/epilation-laser-visage-avant-apres-.jpg" alt="Épilation laser visage avant après" width="742" height="1112" />
           </div>
           <div class="bloc_shadow">
             <div class="animate fade_in">
@@ -620,8 +620,8 @@ const t = translations[lang];
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #fff;
-    background: #bfa477;
-    border: 2px solid #bfa477;
+    background: #8a7044;
+    border: 2px solid #8a7044;
     cursor: pointer;
     transition: all 400ms ease-in-out;
   }
@@ -1833,10 +1833,7 @@ const t = translations[lang];
       gap: 8px;
     }
 
-    .indicator {
-      width: 10px;
-      height: 10px;
-    }
+    /* Touch targets must remain 44px minimum for accessibility */
 
     .section-technology {
       padding: 50px 0;
