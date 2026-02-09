@@ -201,7 +201,7 @@ strong, b {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  border: 1px solid var(--primary-gold);
+  border: 1px solid #5a4d2d;
   border-radius: 0;
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -210,8 +210,8 @@ strong, b {
 
 .btn-primary {
   background-color: transparent;
-  color: var(--primary-gold);
-  border-color: var(--primary-gold);
+  color: #5a4d2d;
+  border-color: #5a4d2d;
 }
 
 .btn-primary:hover {
@@ -221,9 +221,9 @@ strong, b {
 }
 
 .btn-secondary {
-  background-color: var(--primary-gold);
+  background-color: #5a4d2d;
   color: var(--background-white);
-  border-color: var(--primary-gold);
+  border-color: #5a4d2d;
 }
 
 .btn-secondary:hover {
@@ -246,8 +246,8 @@ strong, b {
 
 .btn-outline {
   background: transparent;
-  color: var(--primary-gold);
-  border: 1px solid var(--primary-gold);
+  color: #5a4d2d;
+  border: 1px solid #5a4d2d;
 }
 
 .btn-outline:hover {
@@ -482,15 +482,15 @@ strong, b {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: var(--primary-gold);
+  background-color: #5a4d2d;
   color: var(--background-white);
   border-radius: var(--radius-sm);
 }
 
 .badge-outline {
   background-color: transparent;
-  color: var(--primary-gold);
-  border: 1px solid var(--primary-gold);
+  color: #5a4d2d;
+  border: 1px solid #5a4d2d;
 }
 
 /* ===================================
