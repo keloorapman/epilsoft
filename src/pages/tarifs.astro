@@ -44,48 +44,6 @@ const imgs = {
   <!-- Preload LCP image -->
   <link slot="head" rel="preload" as="image" href={imgs.mobile.pack1} fetchpriority="high" media="(max-width: 600px)" />
 
-  <!-- Critical CSS inlined for fast initial render -->
-  <style slot="head">
-    /* Critical above-the-fold styles */
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:Barlow,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color:#222;line-height:1.7;background-color:#fff;font-size:15px}
-    h1,h2,h3,h4,h5,h6{font-family:"PT Serif",serif;font-weight:700}
-    :root{--color-primary:#bfa477;--color-dark:#222;--color-text:#555;--color-bg-light:#f4f4f4;--color-border:#e0e0e0;--transition:all .4s ease;--shadow:0 0 20px rgba(0,0,0,.1)}
-
-    /* Banner critical styles */
-    .banner-container{max-width:1080px;margin:100px auto;padding:0 1rem}
-    .banner-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:3rem}
-    .banner-header h1{font-family:"PT Serif",serif;font-size:2.5rem;font-style:italic;color:#1a1a1a;margin:0;letter-spacing:1px}
-    .banner-header p{font-family:Barlow,sans-serif;font-size:1rem;color:#555;margin:0 0 0 .5rem;text-transform:uppercase;letter-spacing:1.2px}
-
-    /* Slider critical styles */
-    .slider-wrapper{position:relative}
-    .slider{overflow:hidden;border-radius:12px;aspect-ratio:1190/470;height:auto;width:100%}
-    .slides{display:flex;height:100%;transition:transform .5s ease-in-out}
-    .slide{flex:0 0 100%;box-sizing:border-box;height:100%}
-    .slide img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-    .slide-desktop{display:flex!important}
-    .slide-mobile{display:none!important}
-
-    /* Button critical styles */
-    .btn-reserver{display:inline-block;height:60px;line-height:60px;padding:0 30px;background-color:transparent;color:#1a1a1a;border:1px solid #1a1a1a;font-family:Barlow,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;text-decoration:none;text-align:center;transition:all .4s ease;cursor:pointer}
-    .btn-reserver-mobile{display:none}
-
-    /* Mobile critical styles */
-    @media (max-width:600px){
-      .banner-container{margin:0;padding:0;max-width:none}
-      .banner-header{padding:2rem 1rem 1rem;flex-direction:column;align-items:flex-start}
-      .banner-header h1{margin-bottom:1rem}
-      .btn-reserver-desktop{display:none}
-      .btn-reserver-mobile{display:block;width:90%;max-width:400px;margin:1.5rem auto 2rem}
-      .slider{border-radius:0;aspect-ratio:1/1;height:auto}
-      .slide img{border-radius:0}
-      .slide-desktop{display:none!important}
-      .slide-mobile{display:flex!important}
-    }
-  </style>
-
   <Header lang={lang} />
 
   <main>
