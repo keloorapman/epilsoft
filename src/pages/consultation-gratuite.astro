@@ -485,23 +485,4 @@ const t = translations[lang];
   }
 </style>
 
-<script>
-  // Activer les animations au scroll
-  document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('play');
-        }
-      });
-    }, observerOptions);
-
-    const animateElements = document.querySelectorAll('.animate');
-    animateElements.forEach(el => observer.observe(el));
-  });
-</script>
+<script src="/js/page-animations.js" defer></script>

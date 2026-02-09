@@ -475,48 +475,4 @@ const galleryCategories = [
   }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Filtres de galerie
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const category = btn.dataset.category;
-
-        // Update active button
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Filter gallery items
-        galleryItems.forEach(item => {
-          const itemCategory = item.dataset.category;
-
-          if (category === 'all' || itemCategory === category) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
-        });
-      });
-    });
-
-    // Animations au scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('play');
-        }
-      });
-    }, observerOptions);
-
-    const animateElements = document.querySelectorAll('.animate');
-    animateElements.forEach(el => observer.observe(el));
-  });
-</script>
+<script src="/js/page-animations.js" defer></script>

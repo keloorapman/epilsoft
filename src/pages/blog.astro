@@ -631,38 +631,4 @@ const categories = ["Tous", "Conseils", "Guide", "Technologie", "Témoignages", 
   }
 </style>
 
-<script>
-  // Category Filter
-  document.addEventListener('DOMContentLoaded', () => {
-    const categoryBtns = document.querySelectorAll('.category-btn');
-    const articleCards = document.querySelectorAll('.article-card');
-
-    categoryBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const category = btn.getAttribute('data-category');
-
-        // Update active button
-        categoryBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Filter articles
-        articleCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (category === 'Tous' || cardCategory === category) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // Newsletter form
-    const newsletterForm = document.querySelector('.newsletter-form');
-    newsletterForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Merci pour votre inscription ! Vous recevrez bientôt nos actualités.');
-      (e.target as HTMLFormElement).reset();
-    });
-  });
-</script>
+<script src="/js/page-animations.js" defer></script>
