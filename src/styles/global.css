@@ -375,16 +375,17 @@ strong, b {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 25px;
-  color: var(--primary-gold);
+  color: #8a7044;
   margin-bottom: var(--spacing-sm);
   display: block;
+  font-weight: 600;
 }
 
 .section-title {
   font-family: var(--font-sans);
   font-size: clamp(35px, 5vw, 45px);
   font-weight: 700;
-  color: var(--primary-gold);
+  color: #5a4d2d;
   margin-bottom: var(--spacing-md);
 }
 
