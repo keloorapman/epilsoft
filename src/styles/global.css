@@ -2,8 +2,7 @@
    EPILSOFT - DESIGN  STYLE
    =================================== */
 
-/* Import Google Fonts - PT Serif & Barlow */
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@300;400;500;600;700;800&display=swap');
+/* Google Fonts loaded via HTML link tag for better performance */
 
 :root {
   /* Couleurs principales  Style */
