@@ -14,4 +14,20 @@
 @media(max-width:1200px){.top-secondary-nav{display:none}.header .logo{margin-top:0}.lang-inline{display:none}.lang-mobile{display:inline-block;margin:10px 0 0 20px}.header_nav{width:100%;background:#181818;border-top:60px solid #fff;position:absolute;right:-100%;top:0;overflow-y:scroll;display:grid;transition:right 400ms ease-in-out 400ms;margin-top:0}.header_nav .menu{width:100%;text-align:center;padding:5vw;align-self:center;opacity:0;transform:translateY(40px);transition:all 400ms ease-in-out 0ms}.header_nav .menu li{width:100%;display:block;margin:0}.header_nav .menu li a{display:block;padding:0;color:#fff;text-transform:uppercase;font-size:20px;font-style:normal;letter-spacing:3px}.header_nav .menu li i{width:100%;height:50px;position:absolute;left:0;top:0;display:block;z-index:10}.header_nav .menu .vue_mobile{display:block}.header_nav .menu .sub{width:auto;visibility:visible;position:relative;left:auto;top:auto;margin:5px 0;opacity:1;display:none}.header_nav .menu .sub li a{font:400 16px/46px "Barlow";height:46px;letter-spacing:0.4px;text-transform:none;background:none;border:none}.header_nav.active{right:0;transition-delay:0ms}.header_nav.active .menu{opacity:1;transform:translateY(0);transition-delay:400ms}.menu_mobile{display:inline-block}}
 @media(max-width:800px){.banner{height:80vh;min-height:500px}.banner .logo{width:320px;margin-top:30px}.banner-cta{bottom:30px;left:5vw}.banner-trustindex{bottom:30px;right:40px;max-width:250px}.trustindex-widget{padding:15px}.trustindex-stars{font-size:20px;margin-bottom:6px}.trustindex-rating{font-size:24px}.trustindex-text{font-size:13px}}
 @media(max-width:600px){.banner .logo{width:240px}.banner-cta{bottom:20px;left:5%;right:5%}.banner-trustindex{display:none}}
+
+/* Tarifs page critical styles */
+.banner-container{max-width:1080px;margin:100px auto;padding:0 1rem}
+.banner-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:3rem}
+.banner-header h1{font-family:"PT Serif",serif;font-size:2.5rem;font-style:italic;color:#1a1a1a;margin:0;letter-spacing:1px}
+.banner-header p{font-family:Barlow,sans-serif;font-size:1rem;color:#555;margin:0 0 0 .5rem;text-transform:uppercase;letter-spacing:1.2px}
+.slider-wrapper{position:relative}
+.slider{overflow:hidden;border-radius:12px;aspect-ratio:1190/470;height:auto;width:100%}
+.slides{display:flex;height:100%;transition:transform .5s ease-in-out}
+.slide{flex:0 0 100%;box-sizing:border-box;height:100%}
+.slide img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.slide-desktop{display:flex!important}
+.slide-mobile{display:none!important}
+.btn-reserver{display:inline-block;height:60px;line-height:60px;padding:0 30px;background-color:transparent;color:#1a1a1a;border:1px solid #1a1a1a;font-family:Barlow,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;text-decoration:none;text-align:center;transition:all .4s ease;cursor:pointer}
+.btn-reserver-mobile{display:none}
+@media(max-width:600px){.banner-container{margin:0;padding:0;max-width:none}.banner-header{padding:2rem 1rem 1rem;flex-direction:column;align-items:flex-start}.banner-header h1{margin-bottom:1rem}.btn-reserver-desktop{display:none}.btn-reserver-mobile{display:block;width:90%;max-width:400px;margin:1.5rem auto 2rem}.slider{border-radius:0;aspect-ratio:1/1}.slide img{border-radius:0}.slide-desktop{display:none!important}.slide-mobile{display:flex!important}}
 </style>
