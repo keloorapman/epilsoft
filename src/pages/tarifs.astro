@@ -29,7 +29,7 @@ const imgs = {
     pack3: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35-1.webp', 412, 412),
     pack4: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/09/parrainage-epilation-laser-offre-1.webp', 412, 412),
   },
-  consultation: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/02/Epilation-laser-Epilsoft-Premier-Rendez-vous.webp', 472, 472),
+  consultation: cloudinaryImg('https://epilsoft.be/wp-content/uploads/2025/02/Epilation-laser-Epilsoft-Premier-Rendez-vous.webp', 310, 310),
 };
 ---
 
@@ -38,6 +38,10 @@ const imgs = {
   description="Découvrez nos tarifs d'épilation laser. Pack 8 séances à -50%. Paiement en 2 ou 3 fois sans frais. Consultation gratuite incluse."
   lang={lang}
 >
+  <!-- DNS prefetch for Cloudinary -->
+  <link slot="head" rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+  <!-- Preload LCP image -->
   <link slot="head" rel="preload" as="image" href={imgs.mobile.pack1} fetchpriority="high" media="(max-width: 600px)" />
 
   <!-- Critical CSS inlined for fast initial render -->
@@ -300,7 +304,7 @@ const imgs = {
         </div>
         <div class="image">
             <img src={imgs.consultation}
-                 alt="Consultation gratuite pour l'épilation laser chez Epilsoft" width="472" height="472" />
+                 alt="Consultation gratuite pour l'épilation laser chez Epilsoft" width="310" height="310" />
         </div>
     </section>
 
