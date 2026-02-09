@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: var(--spacing-sm);
-  color: var(--primary-gold);
+  color: #5a4d2d;
 }
 
 h1 { font-size: clamp(35px, 5vw, 45px); }
@@ -134,7 +134,7 @@ strong, b {
    =================================== */
 .titre_main {
   font: 400 45px/50px "PT Serif";
-  color: #bfa477;
+  color: #5a4d2d;
   letter-spacing: 0.4px;
   position: relative;
   margin-bottom: 20px;
@@ -159,7 +159,7 @@ strong, b {
 
 .sous_titre {
   font: 400 25px/35px "PT Serif";
-  color: #bfa477;
+  color: #5a4d2d;
   letter-spacing: 0.4px;
   position: relative;
   margin-bottom: 20px;
@@ -375,7 +375,7 @@ strong, b {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 25px;
-  color: #8a7044;
+  color: #5a4d2d;
   margin-bottom: var(--spacing-sm);
   display: block;
   font-weight: 600;
@@ -461,7 +461,7 @@ strong, b {
 .card-title {
   font-size: 22px;
   font-weight: 700;
-  color: var(--primary-gold);
+  color: #5a4d2d;
   margin-bottom: var(--spacing-sm);
 }
 
