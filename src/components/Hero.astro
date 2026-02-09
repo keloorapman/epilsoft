@@ -1,0 +1,266 @@
+---
+interface Props {
+  badge?: string;
+  subtitle?: string;
+  title: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  image?: string;
+  fullHeight?: boolean;
+}
+
+const {
+  badge,
+  subtitle,
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  secondaryCtaText,
+  secondaryCtaLink,
+  image,
+  fullHeight = false
+} = Astro.props;
+---
+
+<section class:list={["hero", { "hero-full": fullHeight }]}>
+  {image && (
+    <div class="hero-background">
+      <img src={image} alt={title} class="hero-bg-image" />
+      <div class="hero-overlay"></div>
+    </div>
+  )}
+
+  <div class="container">
+    <div class="hero-content">
+      {badge && (
+        <span class="hero-badge animate fade-in delay-1">{badge}</span>
+      )}
+
+      {subtitle && (
+        <p class="hero-subtitle animate fade-in delay-2">{subtitle}</p>
+      )}
+
+      <h1 class="hero-title animate fade-in-up delay-3">{title}</h1>
+
+      {description && (
+        <p class="hero-description animate fade-in-up delay-4">{description}</p>
+      )}
+
+      {(ctaText || secondaryCtaText) && (
+        <div class="hero-actions animate fade-in-up delay-4">
+          {ctaText && ctaLink && (
+            <a href={ctaLink} class="btn btn-secondary">{ctaText}</a>
+          )}
+          {secondaryCtaText && secondaryCtaLink && (
+            <a href={secondaryCtaLink} class="btn btn-outline">{secondaryCtaText}</a>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Semeraro Style */
+  .hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xxl) 0;
+    overflow: hidden;
+  }
+
+  .hero-full {
+    min-height: 100vh;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--background-white);
+    background-color: var(--primary-gold);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 28px;
+    color: var(--primary-gold);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 400;
+  }
+
+  .hero-title {
+    font-family: var(--font-sans);
+    font-size: clamp(40px, 6vw, 60px);
+    font-weight: 700;
+    color: var(--dark-text);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+  }
+
+  /* Animations */
+  .hero .animate {
+    opacity: 0;
+  }
+
+  .hero .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .hero .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .hero {
+      min-height: 450px;
+      padding: 120px 0;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      min-height: 400px;
+      padding: 80px 0;
+    }
+
+    .hero-full {
+      min-height: 70vh;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      padding: 8px 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 8vw, 42px);
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<script>
+  // Trigger animations on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroAnimations = document.querySelectorAll('.hero .animate');
+    heroAnimations.forEach(el => {
+      el.classList.add('play');
+    });
+  });
+</script>

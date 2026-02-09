@@ -1,0 +1,362 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout 
+  title="Contact - Réserver une consultation | Epilsoft"
+  description="Contactez Epilsoft pour réserver votre consultation gratuite. Deux centres à Bruxelles : Uccle et Etterbeek."
+  lang={lang}
+>
+  <Header lang={lang} />
+  
+  <main>
+    <!-- Hero Contact -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="hero-content text-center">
+          <span class="badge">CONTACTEZ-NOUS</span>
+          <h1>Réservez votre consultation</h1>
+          <p>Choisissez le centre le plus proche de chez vous et prenez rendez-vous pour une consultation gratuite.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Centres -->
+    <section class="section">
+      <div class="container">
+        <div class="centers-grid">
+          <!-- Centre Uccle -->
+          <div class="center-contact-card">
+            <div class="center-header">
+              <div class="center-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h2>Centre Uccle</h2>
+            </div>
+
+            <div class="center-info">
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                  <strong>Adresse</strong>
+                  <p>Chaussée d'Alsemberg 630<br>1180 Uccle, Bruxelles</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div>
+                  <strong>Téléphone</strong>
+                  <p><a href="tel:+32XXXXXXXXX">+32 XXX XXX XXX</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div>
+                  <strong>Horaires</strong>
+                  <p>Lun - Ven : 9h00 - 19h00<br>Sam : 9h00 - 17h00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-actions">
+              <a href="#" class="btn btn-primary">Réserver en ligne</a>
+              <a href="/centres/uccle" class="btn btn-outline">Plus d'infos</a>
+            </div>
+          </div>
+
+          <!-- Centre Etterbeek -->
+          <div class="center-contact-card">
+            <div class="center-header">
+              <div class="center-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h2>Centre Etterbeek</h2>
+            </div>
+
+            <div class="center-info">
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                  <strong>Adresse</strong>
+                  <p>Avenue d'Auderghem 156<br>1040 Etterbeek, Bruxelles</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div>
+                  <strong>Téléphone</strong>
+                  <p><a href="tel:+32XXXXXXXXX">+32 XXX XXX XXX</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div>
+                  <strong>Horaires</strong>
+                  <p>Lun - Ven : 9h00 - 19h00<br>Sam : 9h00 - 17h00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-actions">
+              <a href="#" class="btn btn-primary">Réserver en ligne</a>
+              <a href="/centres/etterbeek" class="btn btn-outline">Plus d'infos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Questions -->
+    <section class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">QUESTIONS ?</span>
+          <h2 class="section-title">Nous sommes là pour vous</h2>
+          <p style="max-width: 600px; margin: 1rem auto 0; color: var(--light-text);">
+            N'hésitez pas à nous contacter pour toute question concernant nos services d'épilation laser.
+          </p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="method-card">
+            <div class="method-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3>Par téléphone</h3>
+            <p>Appelez-nous pour prendre rendez-vous ou poser vos questions.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <h3>Par email</h3>
+            <p>Envoyez-nous un email, nous vous répondrons dans les 24h.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <h3>Sur Instagram</h3>
+            <p>Suivez-nous pour voir nos réalisations et promotions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  .contact-hero {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    padding: clamp(4rem, 10vh, 6rem) 1.5rem;
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 1rem 0;
+  }
+
+  .contact-hero p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .centers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .center-contact-card {
+    background: var(--background-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    padding: 3rem 2.5rem;
+    transition: all var(--transition-normal);
+  }
+
+  .center-contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .center-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .center-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .center-header h2 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+  }
+
+  .center-info {
+    margin-bottom: 2.5rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-item svg {
+    color: var(--primary-gold);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .info-item strong {
+    display: block;
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-item p {
+    color: var(--light-text);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .info-item a {
+    color: var(--primary-gold);
+    font-weight: 600;
+  }
+
+  .info-item a:hover {
+    color: var(--gold-dark);
+  }
+
+  .center-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .method-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--background-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    transition: all var(--transition-normal);
+  }
+
+  .method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .method-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .method-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .method-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .method-card p {
+    color: var(--light-text);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 991px) {
+    .centers-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-methods {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

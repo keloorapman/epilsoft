@@ -1,0 +1,733 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout
+  title="Technologie Laser Médicale | Épilation Définitive - Epilsoft"
+  description="Découvrez notre technologie laser médicale de classe 4 pour l'épilation définitive. Plus de 30 ans d'expérience clinique. Résultats supérieurs à 85%."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <main>
+    <!-- Hero Section -->
+    <Hero
+      badge="TECHNOLOGIES"
+      subtitle="Une Liberté Retrouvée"
+      title="Technologies Laser de Pointe"
+      description="Explorez chaque technologie d'épilation définitive pour décider en connaissance de cause et maximiser vos résultats."
+      ctaText="Consultation gratuite"
+      ctaLink="/contact"
+      image="/images/hero-technology.jpg"
+    />
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+      <div class="container">
+        <div class="promo-content">
+          <span class="promo-badge">OFFRE SPÉCIALE</span>
+          <h3>8 séances laser -50%</h3>
+          <a href="/contact" class="btn btn-primary">Profiter de l'offre</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section intro-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">EXPERTISE MÉDICALE</span>
+          <h2 class="section-title">Un Domaine Médical Établi</h2>
+        </div>
+
+        <div class="intro-content">
+          <div class="intro-text">
+            <p>
+              La technologie laser pour l'épilation définitive est un domaine médical mature,
+              avec <strong>plus de 30 ans d'évidence clinique</strong>. Notre approche privilégie
+              la sécurité grâce à des dispositifs médicaux certifiés et une administration par
+              des professionnels qualifiés.
+            </p>
+            <div class="trust-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span>Note Google : 5 étoiles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section comparison-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">COMPARAISON</span>
+          <h2 class="section-title">Méthodes de Traitement</h2>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-card featured">
+            <div class="card-badge">Notre Choix</div>
+            <h3>Laser Médical</h3>
+            <p class="card-subtitle">Précision maximale</p>
+            <ul class="feature-list">
+              <li>Longueur d'onde unique et extrêmement précise</li>
+              <li>Technique de cercles superposés pour couverture méticuleuse</li>
+              <li>Durée : ~2h pour jambes complètes</li>
+              <li>Résultats : >85% de réduction définitive</li>
+              <li>5-8 séances nécessaires</li>
+            </ul>
+            <div class="card-icon">✓</div>
+          </div>
+
+          <div class="comparison-card">
+            <h3>Diode Esthétique</h3>
+            <p class="card-subtitle">Standard de l'industrie</p>
+            <ul class="feature-list">
+              <li>Technique de balayage rapide</li>
+              <li>Vitesse privilégiée sur la précision</li>
+              <li>Durée : ~1h pour jambes complètes</li>
+              <li>Moins puissant</li>
+              <li>15-20 séances requises</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Comparison Table -->
+    <section class="section table-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">COMPARATIF DÉTAILLÉ</span>
+          <h2 class="section-title">Analyse des Technologies</h2>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Caractéristique</th>
+                <th class="featured-col">Laser Médical</th>
+                <th>Diode Esthétique</th>
+                <th>Lumière Pulsée (IPL)</th>
+                <th>Électrolyse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Expertise Médicale</strong></td>
+                <td class="featured-col positive">✓ Oui</td>
+                <td class="negative">✗ Non</td>
+                <td class="negative">✗ Non</td>
+                <td class="negative">✗ Non</td>
+              </tr>
+              <tr>
+                <td><strong>Taux de Réussite</strong></td>
+                <td class="featured-col">>85% des clients</td>
+                <td><50%</td>
+                <td><40%</td>
+                <td>>80%</td>
+              </tr>
+              <tr>
+                <td><strong>Nombre de Séances</strong></td>
+                <td class="featured-col">5-8 séances</td>
+                <td>15-20 séances</td>
+                <td>15-20 séances</td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td><strong>Durée (jambes complètes)</strong></td>
+                <td class="featured-col">120 minutes</td>
+                <td>60 minutes</td>
+                <td>60 minutes</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td><strong>Classification</strong></td>
+                <td class="featured-col">Classe 4 Médicale</td>
+                <td>Classe 1-3</td>
+                <td>Non-laser</td>
+                <td>Électrique</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Individual Technologies -->
+    <section class="section technologies-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TECHNOLOGIES</span>
+          <h2 class="section-title">Profils des Technologies</h2>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card highlight">
+            <div class="tech-header">
+              <div class="tech-icon medical">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+              </div>
+              <h3>Laser Médical</h3>
+              <span class="tech-badge">Classe 4</span>
+            </div>
+            <div class="tech-content">
+              <p><strong>Production à longueur d'onde unique</strong></p>
+              <ul>
+                <li>Application réservée aux professionnels</li>
+                <li>Ciblage le plus précis des follicules pileux</li>
+                <li>Technologie éprouvée depuis plus de 30 ans</li>
+                <li>Résultats définitifs chez >85% des clients</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <h3>Diode Esthétique</h3>
+              <span class="tech-badge">Classe 1-3</span>
+            </div>
+            <div class="tech-content">
+              <p><strong>Classification de puissance inférieure</strong></p>
+              <ul>
+                <li>Nécessite typiquement >15 séances</li>
+                <li>Affaiblit plutôt que d'éliminer définitivement</li>
+                <li>Traitement plus rapide mais moins efficace</li>
+                <li>Résultats variables selon les zones</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                </svg>
+              </div>
+              <h3>Lumière Pulsée (IPL)</h3>
+              <span class="tech-badge">Non-laser</span>
+            </div>
+            <div class="tech-content">
+              <p><strong>Utilise des flashs lumineux plutôt qu'un laser</strong></p>
+              <ul>
+                <li>Spectre lumineux plus large = moins de précision</li>
+                <li>"Affaiblit simplement la cellule germinative"</li>
+                <li>Nombreuses séances nécessaires</li>
+                <li>Résultats souvent temporaires</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-header">
+              <div class="tech-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <h3>Électrolyse</h3>
+              <span class="tech-badge">Électrique</span>
+            </div>
+            <div class="tech-content">
+              <p><strong>Traitement poil par poil</strong></p>
+              <ul>
+                <li>Approche plus chronophage et invasive</li>
+                <li>Niveaux de douleur plus élevés</li>
+                <li>Meilleur pour les petites zones uniquement</li>
+                <li>Résultats définitifs mais temps de traitement très long</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Qualifications -->
+    <section class="section team-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">NOTRE ÉQUIPE</span>
+          <h2 class="section-title">Qualifications de l'Équipe</h2>
+        </div>
+
+        <div class="team-content">
+          <div class="team-text">
+            <h3>Formation Rigoureuse et Continue</h3>
+            <ul class="qualification-list">
+              <li>
+                <strong>Tous nos praticiens suivent un parcours de formation rigoureux</strong>
+                <p>Formation dispensée par notre instructrice de référence, elle-même formée par un médecin</p>
+              </li>
+              <li>
+                <strong>Diplômes en esthétique avec formation laser spécifique</strong>
+                <p>Formation continue pour rester à jour avec les dernières avancées</p>
+              </li>
+              <li>
+                <strong>Protocoles de sécurité cohérents</strong>
+                <p>Garantit des paramètres uniformes et des standards de sécurité dans tous nos centres</p>
+              </li>
+            </ul>
+          </div>
+          <div class="team-image">
+            <img src="/images/team-training.jpg" alt="Formation de l'équipe Epilsoft" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);">
+      <div class="container text-center">
+        <span class="badge">CONSULTATION GRATUITE</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin: 1.5rem 0;">
+          Séance d'information gratuite + séance laser offerte
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--light-text); max-width: 600px; margin: 0 auto 2rem;">
+          Recevez un devis personnalisé et posez toutes vos questions lors d'une consultation gratuite.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/contact" class="btn btn-primary">Réserver ma consultation</a>
+          <a href="/faq" class="btn btn-secondary">Voir la FAQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  /* Promo Banner */
+  .promo-banner {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, #d4a574 100%);
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .promo-badge {
+    background: white;
+    color: var(--primary-gold);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .promo-content h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  /* Introduction Section */
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+    background: #fff9f0;
+    border-radius: var(--radius-md);
+  }
+
+  .trust-badge svg {
+    color: #ffc107;
+    fill: #ffc107;
+  }
+
+  .trust-badge span {
+    font-weight: 600;
+    color: var(--dark-text);
+  }
+
+  /* Comparison Section */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .comparison-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: all var(--transition-normal);
+  }
+
+  .comparison-card.featured {
+    border: 3px solid var(--primary-gold);
+    transform: scale(1.05);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--primary-gold);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .comparison-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .card-subtitle {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .feature-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: var(--light-text);
+  }
+
+  .feature-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gold);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.5rem auto 0;
+  }
+
+  /* Table Section */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .comparison-table thead th {
+    background: var(--dark-text);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .comparison-table .featured-col {
+    background: #fff9f0;
+    font-weight: 600;
+    color: var(--primary-gold);
+  }
+
+  .comparison-table thead .featured-col {
+    background: var(--primary-gold);
+    color: white;
+  }
+
+  .comparison-table .positive {
+    color: #28a745;
+    font-weight: 600;
+  }
+
+  .comparison-table .negative {
+    color: #dc3545;
+  }
+
+  /* Technologies Section */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .tech-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .tech-card.highlight {
+    border: 3px solid var(--primary-gold);
+  }
+
+  .tech-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    text-align: center;
+  }
+
+  .tech-card.highlight .tech-header {
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+  }
+
+  .tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+  }
+
+  .tech-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .tech-icon.medical {
+    background: var(--primary-gold);
+  }
+
+  .tech-icon.medical svg {
+    color: white;
+  }
+
+  .tech-header h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin: 1rem 0 0.5rem;
+  }
+
+  .tech-badge {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .tech-content {
+    padding: 2rem;
+  }
+
+  .tech-content p {
+    color: var(--dark-text);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .tech-content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tech-content li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--light-text);
+    line-height: 1.6;
+  }
+
+  .tech-content li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+  }
+
+  /* Team Section */
+  .team-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .team-text h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    margin-bottom: 2rem;
+  }
+
+  .qualification-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .qualification-list li {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .qualification-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .qualification-list strong {
+    display: block;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .qualification-list p {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .team-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+  }
+
+  .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .comparison-grid,
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-card.featured {
+      transform: none;
+    }
+
+    .team-content {
+      grid-template-columns: 1fr;
+    }
+
+    .team-image {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .promo-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .comparison-card {
+      padding: 1.5rem;
+    }
+
+    .table-wrapper {
+      font-size: 0.9rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem;
+    }
+  }
+</style>

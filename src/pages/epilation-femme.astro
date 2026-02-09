@@ -1,0 +1,522 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+
+const lang = 'fr';
+
+// Galerie d'images par catégorie
+const galleryCategories = [
+  {
+    id: 'jambes',
+    name: 'Jambes',
+    images: [
+      { src: '/images/femme/jambes-1.jpg', alt: 'Épilation laser jambes femme avant/après' },
+      { src: '/images/femme/jambes-2.jpg', alt: 'Résultat épilation jambes complètes' },
+      { src: '/images/femme/jambes-3.jpg', alt: 'Épilation laser demi-jambes' },
+      { src: '/images/femme/jambes-4.jpg', alt: 'Épilation jambes femme' },
+      { src: '/images/femme/jambes-5.jpg', alt: 'Résultat épilation laser jambes' }
+    ]
+  },
+  {
+    id: 'maillot',
+    name: 'Maillot',
+    images: [
+      { src: '/images/femme/maillot-1.jpg', alt: 'Épilation maillot classique' },
+      { src: '/images/femme/maillot-2.jpg', alt: 'Épilation maillot brésilien' },
+      { src: '/images/femme/maillot-3.jpg', alt: 'Épilation maillot intégral' },
+      { src: '/images/femme/maillot-4.jpg', alt: 'Résultat épilation maillot' }
+    ]
+  },
+  {
+    id: 'aisselles',
+    name: 'Aisselles',
+    images: [
+      { src: '/images/femme/aisselles-1.jpg', alt: 'Épilation laser aisselles' },
+      { src: '/images/femme/aisselles-2.jpg', alt: 'Résultat épilation aisselles avant/après' },
+      { src: '/images/femme/aisselles-3.jpg', alt: 'Épilation aisselles femme' }
+    ]
+  },
+  {
+    id: 'visage',
+    name: 'Visage',
+    images: [
+      { src: '/images/femme/visage-1.jpg', alt: 'Épilation laser lèvre supérieure' },
+      { src: '/images/femme/visage-2.jpg', alt: 'Épilation menton femme' },
+      { src: '/images/femme/visage-3.jpg', alt: 'Épilation joues' },
+      { src: '/images/femme/visage-4.jpg', alt: 'Résultat épilation visage complet' }
+    ]
+  },
+  {
+    id: 'bras',
+    name: 'Bras',
+    images: [
+      { src: '/images/femme/bras-1.jpg', alt: 'Épilation laser bras complets' },
+      { src: '/images/femme/bras-2.jpg', alt: 'Épilation avant-bras femme' },
+      { src: '/images/femme/bras-3.jpg', alt: 'Résultat épilation bras' }
+    ]
+  },
+  {
+    id: 'dos',
+    name: 'Dos',
+    images: [
+      { src: '/images/femme/dos-1.jpg', alt: 'Épilation laser dos complet' },
+      { src: '/images/femme/dos-2.jpg', alt: 'Épilation bas du dos' },
+      { src: '/images/femme/dos-3.jpg', alt: 'Résultat épilation dos femme' }
+    ]
+  },
+  {
+    id: 'ventre',
+    name: 'Ventre',
+    images: [
+      { src: '/images/femme/ventre-1.jpg', alt: 'Épilation laser ventre' },
+      { src: '/images/femme/ventre-2.jpg', alt: 'Épilation ligne abdominale' },
+      { src: '/images/femme/ventre-3.jpg', alt: 'Résultat épilation ventre' }
+    ]
+  },
+  {
+    id: 'fesses',
+    name: 'Fesses',
+    images: [
+      { src: '/images/femme/fesses-1.jpg', alt: 'Épilation laser fesses' },
+      { src: '/images/femme/fesses-2.jpg', alt: 'Résultat épilation fesses' }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Épilation Laser Femme à Bruxelles | Epilsoft"
+  description="Découvrez nos services d'épilation laser pour femme à Bruxelles. Résultats durables pour toutes les zones : jambes, maillot, aisselles, visage. Galerie avant/après."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <Hero
+    title="Épilation Laser pour Femme"
+    subtitle="Résultats Définitifs"
+    description="Découvrez nos résultats d'épilation laser féminine. Une peau parfaitement lisse et douce, adaptée à tous types de peau."
+    ctaText="Prendre rendez-vous"
+    ctaLink="/contact"
+    image="/images/centres-epilation-laser-Bruxelles.jpg"
+  />
+
+  <main class="gallery-page">
+    <!-- Introduction -->
+    <div class="wrapper section-intro">
+      <div class="intro-content animate fade_in">
+        <h2 class="titre_main">Galerie Femme</h2>
+        <p class="small_cap">Résultats avant/après</p>
+        <span class="sub_line"></span>
+        <p class="intro-text">
+          Découvrez notre galerie de résultats d'épilation laser pour femme. Nos technologies laser Candela Alexandrite et Nd:Yag permettent de traiter efficacement toutes les zones du corps féminin avec des résultats durables et une peau parfaitement douce.
+        </p>
+        <span class="sub_line"></span>
+      </div>
+    </div>
+
+    <!-- Filtres par catégorie -->
+    <div class="wrapper">
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-category="all">Toutes les zones</button>
+        {galleryCategories.map(category => (
+          <button class="filter-btn" data-category={category.id}>
+            {category.name}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Galerie d'images -->
+    <div class="wrapper">
+      <div class="gallery-grid">
+        {galleryCategories.map(category => (
+          category.images.map(image => (
+            <div class="gallery-item" data-category={category.id}>
+              <div class="gallery-image">
+                <img src={image.src} alt={image.alt} loading="lazy" />
+                <div class="gallery-overlay">
+                  <div class="gallery-category-badge">{category.name}</div>
+                  <a href="/contact" class="gallery-cta">Prendre rendez-vous</a>
+                </div>
+              </div>
+            </div>
+          ))
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="wrapper section-cta">
+      <div class="cta-content animate fade_in">
+        <h3 class="cta-title">Prête à commencer votre traitement ?</h3>
+        <p class="cta-description">Consultez nos experts pour un diagnostic personnalisé et découvrez comment l'épilation laser peut transformer votre routine beauté.</p>
+        <a href="/contact" class="link">Réserver une consultation gratuite</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  /* Section Introduction */
+  .section-intro {
+    padding: 80px 0 60px;
+    text-align: center;
+  }
+
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #666;
+    margin: 30px auto;
+    max-width: 700px;
+  }
+
+  /* Filtres */
+  .gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+
+  .filter-btn {
+    padding: 12px 30px;
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 400ms ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #bfa477;
+    color: #bfa477;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(191, 164, 119, 0.2);
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #bfa477 0%, #d2bb94 100%);
+    border-color: #bfa477;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(191, 164, 119, 0.3);
+  }
+
+  /* Galerie Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 400ms ease;
+  }
+
+  .gallery-item.hidden {
+    display: none;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(191, 164, 119, 0.25);
+  }
+
+  .gallery-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 400ms ease;
+  }
+
+  .gallery-item:hover .gallery-image img {
+    transform: scale(1.1);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-category-badge {
+    align-self: flex-start;
+    padding: 8px 16px;
+    background: rgba(191, 164, 119, 0.95);
+    color: #fff;
+    font-family: "Barlow", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+  }
+
+  .gallery-cta {
+    align-self: center;
+    padding: 12px 30px;
+    background: #fff;
+    color: #222;
+    font-family: "Barlow", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 300ms ease;
+  }
+
+  .gallery-cta:hover {
+    background: #bfa477;
+    color: #fff;
+    transform: scale(1.05);
+  }
+
+  /* CTA Section */
+  .section-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-family: "PT Serif", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+    line-height: 28px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .cta-content .link {
+    width: auto;
+    padding: 0 50px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .section-intro {
+      padding: 60px 0 40px;
+    }
+
+    .gallery-filters {
+      margin-bottom: 50px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      padding-bottom: 60px;
+    }
+
+    .gallery-image {
+      height: 240px;
+    }
+
+    .section-cta {
+      padding: 60px 0;
+    }
+
+    .cta-title {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .section-intro {
+      padding: 50px 0 30px;
+    }
+
+    .intro-text {
+      font-size: 15px;
+      line-height: 26px;
+    }
+
+    .gallery-filters {
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-bottom: 50px;
+    }
+
+    .gallery-image {
+      height: 280px;
+    }
+
+    .section-cta {
+      padding: 50px 0;
+    }
+
+    .cta-title {
+      font-size: 28px;
+    }
+
+    .cta-description {
+      font-size: 15px;
+      line-height: 26px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-filters {
+      gap: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      font-size: 11px;
+    }
+
+    .gallery-image {
+      height: 240px;
+    }
+
+    .cta-title {
+      font-size: 24px;
+    }
+
+    .cta-content .link {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  /* Animations */
+  .animate {
+    opacity: 0;
+  }
+
+  .animate.play {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .fade_in.play {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Filtres de galerie
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter gallery items
+        galleryItems.forEach(item => {
+          const itemCategory = item.dataset.category;
+
+          if (category === 'all' || itemCategory === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Animations au scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('play');
+        }
+      });
+    }, observerOptions);
+
+    const animateElements = document.querySelectorAll('.animate');
+    animateElements.forEach(el => observer.observe(el));
+  });
+</script>

@@ -1,0 +1,285 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout 
+  title="Nos Services - Épilation Laser | Epilsoft"
+  description="Découvrez nos services d'épilation laser : Alexandrite, Diode et Nd:YAG. Technologies de pointe pour tous les types de peau."
+  lang={lang}
+>
+  <Header lang={lang} />
+  
+  <main>
+    <!-- Hero -->
+    <Hero 
+      subtitle="NOS SERVICES"
+      title="Technologies Laser"
+      description="Trois types de laser pour s'adapter à tous les types de peau et de poils. Des résultats visibles dès les premières séances."
+      image="/images/services-hero.jpg"
+    />
+
+    <!-- Section Technologies -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">NOTRE EXPERTISE</span>
+          <h2 class="section-title">Les 3 Technologies Laser</h2>
+          <p style="max-width: 700px; margin: 1rem auto 0; color: var(--light-text); line-height: 1.8;">
+            Nous utilisons les technologies laser les plus avancées pour garantir des résultats optimaux, 
+            quelle que soit votre carnation ou la nature de vos poils.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <ServiceCard 
+            title="Laser Alexandrite"
+            description="Le laser Alexandrite est parfait pour les peaux claires à mates (phototypes I à IV). Sa longueur d'onde de 755nm cible efficacement la mélanine des poils. Rapide et efficace, il est idéal pour traiter de grandes zones comme les jambes ou le dos."
+            image="/images/laser-alexandrite.jpg"
+          />
+          <ServiceCard 
+            title="Laser Diode"
+            description="Le laser Diode (810nm) est polyvalent et convient à presque tous les types de peau. Il offre un excellent compromis entre efficacité et confort. Son système de refroidissement intégré rend le traitement agréable même sur les zones sensibles."
+            image="/images/laser-diode.jpg"
+          />
+          <ServiceCard 
+            title="Laser Nd:YAG"
+            description="Spécialement conçu pour les peaux foncées (phototypes V et VI), le laser Nd:YAG (1064nm) pénètre en profondeur sans affecter l'épiderme. C'est la technologie la plus sûre pour les carnations mates à foncées."
+            image="/images/laser-ndyag.jpg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Zones de traitement -->
+    <section class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ZONES DE TRAITEMENT</span>
+          <h2 class="section-title">Toutes les zones du corps</h2>
+        </div>
+
+        <div class="zones-grid">
+          <div class="zone-card">
+            <div class="zone-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h3>Visage</h3>
+            <p>Lèvre supérieure, menton, joues, front</p>
+          </div>
+
+          <div class="zone-card">
+            <div class="zone-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3>Corps</h3>
+            <p>Aisselles, bras, torse, dos, abdomen</p>
+          </div>
+
+          <div class="zone-card">
+            <div class="zone-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M2 12h20"></path>
+              </svg>
+            </div>
+            <h3>Zones intimes</h3>
+            <p>Maillot brésilien, maillot intégral</p>
+          </div>
+
+          <div class="zone-card">
+            <div class="zone-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20v-6M6 20V10M18 20V4"></path>
+              </svg>
+            </div>
+            <h3>Membres inférieurs</h3>
+            <p>Jambes complètes, demi-jambes, cuisses</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Avantages -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">AVANTAGES</span>
+          <h2 class="section-title">Pourquoi l'épilation laser ?</h2>
+        </div>
+
+        <div class="advantages-grid">
+          <div class="advantage-item">
+            <div class="advantage-number">01</div>
+            <h3>Résultats durables</h3>
+            <p>Réduction permanente de 80 à 95% des poils après un traitement complet</p>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-number">02</div>
+            <h3>Rapide et efficace</h3>
+            <p>Séances courtes, de 15 minutes à 1 heure selon la zone traitée</p>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-number">03</div>
+            <h3>Confort optimal</h3>
+            <p>Systèmes de refroidissement intégrés pour un traitement confortable</p>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-number">04</div>
+            <h3>Économique</h3>
+            <p>Un investissement rentable comparé aux méthodes d'épilation temporaires</p>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-number">05</div>
+            <h3>Peau douce</h3>
+            <p>Fini les irritations, poils incarnés et repousses disgracieuses</p>
+          </div>
+
+          <div class="advantage-item">
+            <div class="advantage-number">06</div>
+            <h3>Adapté à tous</h3>
+            <p>Technologies variées pour tous les types de peau et de poils</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);">
+      <div class="container text-center">
+        <span class="badge">CONSULTATION GRATUITE</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin: 1.5rem 0;">
+          Commencez votre parcours vers une peau lisse
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--light-text); max-width: 600px; margin: 0 auto 2rem;">
+          Réservez une consultation gratuite pour déterminer le meilleur traitement pour vous.
+        </p>
+        <a href="/contact" class="btn btn-primary">Réserver maintenant</a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  .zones-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .zone-card {
+    background: var(--background-white);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .zone-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .zone-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .zone-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .zone-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .zone-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .advantage-item {
+    position: relative;
+    padding-left: 4rem;
+  }
+
+  .advantage-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-gold);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .advantage-item h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .advantage-item p {
+    color: var(--light-text);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 991px) {
+    .zones-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .zones-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,743 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout
+  title="Nos Centres à Bruxelles | Uccle & Etterbeek - Epilsoft"
+  description="Deux centres d'épilation laser à Bruxelles : Uccle et Etterbeek. Environnements modernes et accueillants. Sur rendez-vous uniquement."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <main>
+    <!-- Hero Section -->
+    <Hero
+      badge="NOS CENTRES"
+      subtitle="Deux Adresses à Bruxelles"
+      title="Centres d'Épilation Laser"
+      description="Environnements modernes et accueillants à Uccle et Etterbeek. Rendez-vous disponibles du lundi au samedi."
+      ctaText="Réserver un rendez-vous"
+      ctaLink="/contact"
+      image="/images/hero-centers.jpg"
+    />
+
+    <!-- Centers Overview -->
+    <section class="section centers-overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">BRUXELLES</span>
+          <h2 class="section-title">Deux Centres à Votre Service</h2>
+          <p class="section-description">
+            Environnements professionnels modernes équipés des technologies laser les plus avancées
+          </p>
+        </div>
+
+        <div class="centers-grid">
+          <!-- Uccle Center -->
+          <div class="center-card animate">
+            <div class="center-image">
+              <img src="/images/center-uccle.jpg" alt="Centre Epilsoft Uccle" loading="lazy" />
+              <div class="center-badge">Uccle</div>
+            </div>
+
+            <div class="center-content">
+              <h3>Epilsoft Uccle</h3>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Adresse</strong>
+                  <p>Chaussée d'Alsemberg 630<br>1180 Uccle</p>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Téléphone</strong>
+                  <p><a href="tel:+32491769639">0491 76 96 39</a></p>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Horaires</strong>
+                  <p>
+                    Lun-Ven : 09:00 - 20:00<br>
+                    Sam : 10:00 - 18:00<br>
+                    <em>Sur rendez-vous uniquement</em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="center-actions">
+                <a href="https://maps.google.com/?q=Chaussée+d'Alsemberg+630,+1180+Uccle" target="_blank" rel="noopener" class="btn btn-outline">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Itinéraire
+                </a>
+                <a href="/contact" class="btn btn-primary">Réserver</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Etterbeek Center -->
+          <div class="center-card animate">
+            <div class="center-image">
+              <img src="/images/center-etterbeek.jpg" alt="Centre Epilsoft Etterbeek" loading="lazy" />
+              <div class="center-badge">Etterbeek</div>
+            </div>
+
+            <div class="center-content">
+              <h3>Epilsoft Etterbeek</h3>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Adresse</strong>
+                  <p>Avenue d'Auderghem 156<br>1040 Etterbeek</p>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Téléphone</strong>
+                  <p><a href="tel:+32491769639">0491 76 96 39</a></p>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <strong>Horaires</strong>
+                  <p>
+                    Lun-Ven : 09:00 - 20:00<br>
+                    Sam : 10:00 - 18:00<br>
+                    <em>Sur rendez-vous uniquement</em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="center-actions">
+                <a href="https://maps.google.com/?q=Avenue+d'Auderghem+156,+1040+Etterbeek" target="_blank" rel="noopener" class="btn btn-outline">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Itinéraire
+                </a>
+                <a href="/contact" class="btn btn-primary">Réserver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="section facilities-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">NOS INSTALLATIONS</span>
+          <h2 class="section-title">Environnement Professionnel & Moderne</h2>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3>Espaces Accueillants</h3>
+            <p>Salles de traitement modernes et confortables pour votre bien-être</p>
+          </div>
+
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3>Équipements de Pointe</h3>
+            <p>Technologies laser médicales de dernière génération</p>
+          </div>
+
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Hygiène Stricte</h3>
+            <p>Protocoles de désinfection et stérilisation après chaque séance</p>
+          </div>
+
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Équipe Certifiée</h3>
+            <p>Praticiens qualifiés et formés en continu</p>
+          </div>
+
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Suivi Personnalisé</h3>
+            <p>Dossier client individuel et ajustements selon vos besoins</p>
+          </div>
+
+          <div class="facility-card animate">
+            <div class="facility-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <h3>Parking Disponible</h3>
+            <p>Facilités de stationnement à proximité des deux centres</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access Info -->
+    <section class="section access-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ACCÈS</span>
+          <h2 class="section-title">Comment Nous Rejoindre</h2>
+        </div>
+
+        <div class="access-grid">
+          <div class="access-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h0M2 9.5h20"></path>
+              </svg>
+              Transport en Commun
+            </h3>
+            <div class="access-content">
+              <div class="location-info">
+                <strong>Uccle :</strong>
+                <p>
+                  Tram 4, 51, 92<br>
+                  Bus 43, 60<br>
+                  Arrêt : Alsemberg / Dieweg
+                </p>
+              </div>
+              <div class="location-info">
+                <strong>Etterbeek :</strong>
+                <p>
+                  Métro ligne 5 (Thieffry)<br>
+                  Bus 34, 80<br>
+                  Tram 7, 25
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="access-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                <circle cx="7" cy="17" r="2"></circle>
+                <path d="M9 17h6"></path>
+                <circle cx="17" cy="17" r="2"></circle>
+              </svg>
+              En Voiture
+            </h3>
+            <div class="access-content">
+              <div class="location-info">
+                <strong>Uccle :</strong>
+                <p>
+                  Parking gratuit disponible<br>
+                  Accès facile depuis le Ring<br>
+                  Sortie Alsemberg
+                </p>
+              </div>
+              <div class="location-info">
+                <strong>Etterbeek :</strong>
+                <p>
+                  Parking à proximité<br>
+                  Proche des Institutions Européennes<br>
+                  Accès via E40
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">RENDEZ-VOUS</span>
+          <h2 class="section-title">Réserver Votre Consultation</h2>
+          <p class="section-description">
+            Nos centres fonctionnent sur rendez-vous uniquement pour garantir votre confort et notre disponibilité
+          </p>
+        </div>
+
+        <div class="booking-methods">
+          <div class="booking-method animate">
+            <div class="method-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3>Par Téléphone</h3>
+            <p>Appelez-nous directement</p>
+            <a href="tel:+32491769639" class="method-link">0491 76 96 39</a>
+          </div>
+
+          <div class="booking-method animate">
+            <div class="method-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>En Ligne</h3>
+            <p>Formulaire de réservation</p>
+            <a href="/contact" class="method-link">Réserver maintenant</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);">
+      <div class="container text-center">
+        <span class="badge">CONSULTATION GRATUITE</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin: 1.5rem 0;">
+          Visitez-nous dans l'un de nos centres
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--light-text); max-width: 600px; margin: 0 auto 2rem;">
+          Consultation gratuite avec séance laser offerte. Découvrez nos installations modernes.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/contact" class="btn btn-primary">Réserver une consultation</a>
+          <a href="tel:+32491769639" class="btn btn-secondary">Appeler : 0491 76 96 39</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  /* Centers Grid */
+  .centers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .center-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hover);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .center-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .center-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+
+  .center-card:hover .center-image img {
+    transform: scale(1.05);
+  }
+
+  .center-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-gold);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .center-content {
+    padding: 2.5rem;
+  }
+
+  .center-content h3 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 2rem;
+  }
+
+  .info-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .info-group:last-of-type {
+    border-bottom: none;
+  }
+
+  .info-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .info-text strong {
+    display: block;
+    color: var(--dark-text);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .info-text p {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .info-text em {
+    font-size: 0.9rem;
+    color: var(--primary-gold);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .info-text a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .info-text a:hover {
+    text-decoration: underline;
+  }
+
+  .center-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .center-actions .btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Facilities */
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .facility-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .facility-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .facility-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .facility-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  .facility-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+  }
+
+  /* Access Section */
+  .access-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .access-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .access-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .access-card svg {
+    color: var(--primary-gold);
+  }
+
+  .access-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .location-info strong {
+    display: block;
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+
+  .location-info p {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* Booking Section */
+  .booking-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .booking-method {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .booking-method:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .method-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .method-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .booking-method h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .booking-method p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+  }
+
+  .method-link {
+    display: inline-block;
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-gold);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+  }
+
+  .method-link:hover {
+    background: var(--primary-gold);
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .centers-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .facilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .access-grid,
+    .booking-methods {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .facilities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .center-content {
+      padding: 1.5rem;
+    }
+
+    .center-actions {
+      flex-direction: column;
+    }
+
+    .access-card {
+      padding: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Animation on scroll
+  const animateElements = document.querySelectorAll('.animate');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('play');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  animateElements.forEach(el => observer.observe(el));
+</script>

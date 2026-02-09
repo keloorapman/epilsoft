@@ -1,0 +1,439 @@
+---
+// Cookie Settings Popup Component
+---
+
+<div class="cookie-settings-overlay" id="cookie-settings-overlay">
+  <div class="cookie-settings-popup">
+    <button class="cookie-close" id="cookie-close" aria-label="Fermer">&times;</button>
+
+    <h2 class="cookie-title">Paramétrer les cookies</h2>
+    <p class="cookie-intro">
+      Nous utilisons des cookies afin d'assurer le bon fonctionnement de notre site et d'améliorer votre expérience de navigation.
+      Vous pouvez à tout moment choisir les catégories de cookies que vous souhaitez activer ou désactiver.
+    </p>
+
+    <div class="cookie-options">
+      <!-- Cookies essentiels -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="necessary-cookies"
+              checked
+              disabled
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Cookies essentiels</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Ces cookies sont indispensables au fonctionnement technique du site (affichage des pages, sécurité, sauvegarde des préférences).
+          Ils sont automatiquement activés et ne peuvent pas être désactivés.
+          Sans eux, le site pourrait ne pas fonctionner correctement.
+        </p>
+      </div>
+
+      <!-- Cookies de performance -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="performance-cookies"
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Cookies de performance</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Ces cookies servent à analyser la fréquentation et l'utilisation du site, afin d'en améliorer le contenu et la navigation.
+          Les informations recueillies sont agrégées et anonymes, et ne permettent pas d'identifier un utilisateur.
+          Vous pouvez choisir de les autoriser ou non.
+        </p>
+      </div>
+
+      <!-- Cookies publicitaires -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="advertising-cookies"
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Cookies publicitaires</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Ces cookies sont utilisés pour afficher des publicités pertinentes selon vos centres d'intérêt et pour mesurer l'efficacité des campagnes publicitaires.
+          Leur refus n'affecte pas votre expérience de navigation, mais peut limiter la pertinence des annonces diffusées.
+        </p>
+      </div>
+
+      <!-- Données partagées avec nos partenaires -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="partner-data"
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Données partagées avec nos partenaires</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Certains cookies peuvent permettre à nos partenaires (comme Google) de collecter des informations anonymes afin de mesurer les performances de nos publicités ou d'améliorer leurs services.
+          Vous pouvez refuser ce partage si vous le souhaitez.
+        </p>
+      </div>
+
+      <!-- Personnalisation des contenus -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="content-personalization"
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Personnalisation des contenus</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Lorsque cette option est activée, le site peut adapter certains contenus ou messages en fonction de votre comportement de navigation ou de vos préférences.
+          Cette personnalisation peut être désactivée à tout moment.
+        </p>
+      </div>
+
+      <!-- Pixel de suivi -->
+      <div class="cookie-option">
+        <div class="cookie-option-header">
+          <label class="cookie-label">
+            <input
+              type="checkbox"
+              id="tracking-pixel"
+              class="cookie-checkbox"
+            />
+            <span class="cookie-option-title">Pixel de suivi</span>
+          </label>
+        </div>
+        <p class="cookie-option-description">
+          Le pixel permet à certains réseaux sociaux de suivre la navigation sur notre site afin de constituer des audiences et d'afficher des publicités plus adaptées sur leurs plateformes.
+          Vous pouvez refuser ce suivi.
+        </p>
+      </div>
+    </div>
+
+    <button class="cookie-save-btn" id="cookie-save-btn">
+      Enregistrer mes préférences
+    </button>
+  </div>
+</div>
+
+<style>
+  .cookie-settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 300ms ease-in-out;
+  }
+
+  .cookie-settings-overlay.show {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .cookie-settings-popup {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 400ms ease-out;
+  }
+
+  .cookie-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    transition: all 300ms ease;
+    z-index: 10;
+  }
+
+  .cookie-close:hover {
+    background: #bfa477;
+    color: #fff;
+    transform: rotate(90deg);
+  }
+
+  .cookie-title {
+    font-family: "PT Serif", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+    padding-right: 40px;
+  }
+
+  .cookie-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .cookie-options {
+    margin-bottom: 30px;
+  }
+
+  .cookie-option {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 300ms ease;
+  }
+
+  .cookie-option:hover {
+    border-color: #bfa477;
+    box-shadow: 0 2px 10px rgba(191, 164, 119, 0.1);
+  }
+
+  .cookie-option-header {
+    margin-bottom: 12px;
+  }
+
+  .cookie-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+  }
+
+  .cookie-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #bfa477;
+  }
+
+  .cookie-checkbox:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .cookie-option-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .cookie-option-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+    padding-left: 32px;
+  }
+
+  .cookie-save-btn {
+    width: 100%;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #bfa477 0%, #d2bb94 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 400ms ease;
+    box-shadow: 0 4px 15px rgba(191, 164, 119, 0.3);
+  }
+
+  .cookie-save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(191, 164, 119, 0.4);
+  }
+
+  @media (max-width: 800px) {
+    .cookie-settings-popup {
+      padding: 30px 20px;
+      width: 95%;
+      max-height: 85vh;
+    }
+
+    .cookie-title {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .cookie-intro {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .cookie-option {
+      padding: 15px;
+    }
+
+    .cookie-option-title {
+      font-size: 15px;
+    }
+
+    .cookie-option-description {
+      font-size: 13px;
+      padding-left: 28px;
+    }
+
+    .cookie-save-btn {
+      font-size: 14px;
+      padding: 14px 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cookie-settings-popup {
+      padding: 25px 15px;
+    }
+
+    .cookie-title {
+      font-size: 22px;
+    }
+
+    .cookie-option {
+      padding: 12px;
+    }
+
+    .cookie-option-description {
+      padding-left: 0;
+      margin-top: 8px;
+    }
+  }
+</style>
+
+<script>
+  // Cookie Settings Management
+  document.addEventListener('DOMContentLoaded', () => {
+    const cookieOverlay = document.getElementById('cookie-settings-overlay');
+    const cookieClose = document.getElementById('cookie-close');
+    const cookieSaveBtn = document.getElementById('cookie-save-btn');
+
+    // Load saved preferences
+    function loadCookiePreferences() {
+      const preferences = localStorage.getItem('cookiePreferences');
+      if (preferences) {
+        const prefs = JSON.parse(preferences);
+        document.getElementById('performance-cookies').checked = prefs.performance || false;
+        document.getElementById('advertising-cookies').checked = prefs.advertising || false;
+        document.getElementById('partner-data').checked = prefs.partnerData || false;
+        document.getElementById('content-personalization').checked = prefs.personalization || false;
+        document.getElementById('tracking-pixel').checked = prefs.tracking || false;
+      }
+    }
+
+    // Open cookie settings from footer link
+    const confidentialityLink = document.getElementById('cookie-settings-link');
+    if (confidentialityLink) {
+      confidentialityLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        cookieOverlay?.classList.add('show');
+        loadCookiePreferences();
+      });
+    }
+
+    // Close popup
+    function closeCookieSettings() {
+      cookieOverlay?.classList.remove('show');
+    }
+
+    cookieClose?.addEventListener('click', closeCookieSettings);
+
+    // Close on overlay click
+    cookieOverlay?.addEventListener('click', (e) => {
+      if (e.target === cookieOverlay) {
+        closeCookieSettings();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cookieOverlay?.classList.contains('show')) {
+        closeCookieSettings();
+      }
+    });
+
+    // Save preferences
+    cookieSaveBtn?.addEventListener('click', () => {
+      const preferences = {
+        necessary: true, // Always true
+        performance: document.getElementById('performance-cookies').checked,
+        advertising: document.getElementById('advertising-cookies').checked,
+        partnerData: document.getElementById('partner-data').checked,
+        personalization: document.getElementById('content-personalization').checked,
+        tracking: document.getElementById('tracking-pixel').checked,
+        timestamp: new Date().toISOString()
+      };
+
+      localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+
+      // Show success feedback
+      cookieSaveBtn.textContent = 'Préférences enregistrées !';
+      cookieSaveBtn.style.background = 'linear-gradient(135deg, #4caf50 0%, #66bb6a 100%)';
+
+      setTimeout(() => {
+        cookieSaveBtn.textContent = 'Enregistrer mes préférences';
+        cookieSaveBtn.style.background = 'linear-gradient(135deg, #bfa477 0%, #d2bb94 100%)';
+        closeCookieSettings();
+      }, 1500);
+    });
+
+    // Load preferences on page load
+    loadCookiePreferences();
+  });
+</script>

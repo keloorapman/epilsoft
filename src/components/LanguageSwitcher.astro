@@ -1,0 +1,75 @@
+---
+interface Props {
+  currentLang: 'fr' | 'en' | 'nl';
+  currentPath?: string;
+}
+
+const { currentLang, currentPath = '/' } = Astro.props;
+
+// Génère les URLs pour chaque langue
+const getLocalizedPath = (lang: string) => {
+  if (lang === 'fr') {
+    // Français = URL sans préfixe
+    return currentPath.replace(/^\/(en|nl)/, '') || '/';
+  }
+  // Autres langues = avec préfixe
+  const cleanPath = currentPath.replace(/^\/(en|nl)/, '') || '/';
+  return `/${lang}${cleanPath}`;
+};
+
+const languages = [
+  { code: 'fr', label: 'FR', name: 'Français' },
+  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'nl', label: 'NL', name: 'Nederlands' }
+];
+---
+
+<div class="language-switcher">
+  {languages.map((lang) => (
+    <a 
+      href={getLocalizedPath(lang.code)}
+      class={`lang-link ${currentLang === lang.code ? 'active' : ''}`}
+      aria-label={`Switch to ${lang.name}`}
+      title={lang.name}
+    >
+      {lang.label}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .lang-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+  }
+  
+  .lang-link:hover {
+    color: var(--gold-primary);
+    border-color: var(--gold-primary);
+  }
+  
+  .lang-link.active {
+    color: var(--white);
+    background-color: var(--gold-primary);
+    border-color: var(--gold-primary);
+  }
+  
+  @media (max-width: 768px) {
+    .lang-link {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>

@@ -1,0 +1,730 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout
+  title="FAQ - Questions Fréquentes | Épilation Laser - Epilsoft"
+  description="Toutes vos questions sur l'épilation laser : douleur, nombre de séances, résultats, contre-indications, préparation. Réponses d'experts."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <main>
+    <!-- Hero Section -->
+    <Hero
+      badge="FAQ"
+      subtitle="Questions Fréquentes"
+      title="Toutes Vos Questions sur l'Épilation Laser"
+      description="Découvrez les réponses à vos questions les plus fréquentes sur l'épilation laser définitive."
+      ctaText="Consultation gratuite"
+      ctaLink="/contact"
+      image="/images/hero-faq.jpg"
+    />
+
+    <!-- FAQ Categories -->
+    <section class="section faq-nav-section">
+      <div class="container">
+        <div class="faq-categories">
+          <a href="#general" class="category-link">Questions Générales</a>
+          <a href="#sessions" class="category-link">Séances & Résultats</a>
+          <a href="#safety" class="category-link">Sécurité & Précautions</a>
+          <a href="#specific" class="category-link">Cas Spécifiques</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- General Questions -->
+    <section id="general" class="section faq-section">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-subtitle">FAQ</span>
+          <h2 class="category-title">Questions Générales</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Que se passe-t-il lors de votre première séance laser ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Votre parcours commence par une <strong>consultation gratuite</strong>, qui comprend un questionnaire médical
+                et un formulaire de consentement. Ensuite, nous planifions votre première séance, lors de laquelle vous devez
+                raser la zone de traitement la veille.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Les résultats sont-ils garantis ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Il s'agit d'une méthode permanente avec environ <strong>85% d'élimination des poils</strong>. Cependant,
+                une repousse hormonale reste possible selon votre type de peau (phototype). Nos technologies laser médicales
+                offrent les meilleurs résultats du marché.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Pourquoi investir dans l'épilation laser ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Comparé à d'autres méthodes, le laser offre <strong>permanence et confort</strong>. L'électrolyse est plus lente
+                et coûteuse ; l'épilation à la cire nécessite des séances à vie avec douleur et dépenses récurrentes.
+                Le laser médical est un investissement unique pour une solution définitive.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>L'épilation laser est-elle douloureuse ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                La sensation ressemble à un <strong>léger picotement et une chaleur</strong>, variant selon la zone et la sensibilité.
+                Nos appareils incluent un système de refroidissement de haute qualité pour optimiser votre confort pendant le traitement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sessions & Results -->
+    <section id="sessions" class="section faq-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-subtitle">SÉANCES</span>
+          <h2 class="category-title">Séances & Résultats</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Pourquoi choisir les lasers médicaux d'Epilsoft ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Nous proposons deux options : <strong>Laser Alexandrite (755nm)</strong> pour les peaux claires ;
+                <strong>Laser ND:YAG (1064nm)</strong> pour les peaux foncées. Les deux sont équipés de systèmes de
+                refroidissement intégrés pour votre confort et sécurité.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quels types de peau peuvent être traités ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Tous les types de peau</strong>, des plus clairs aux plus foncés, peuvent être traités grâce à notre
+                technologie laser adaptée. Nous ajustons les paramètres selon votre phototype pour garantir efficacité et sécurité.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Combien de séances sont nécessaires ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Les peaux claires nécessitent généralement <strong>5 à 8 séances</strong> ; les peaux plus foncées ont besoin
+                de <strong>9 à 12 séances</strong> pour des résultats optimaux. Le nombre exact varie selon le type de poils,
+                la zone traitée et votre réponse au traitement.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quel est le délai d'attente entre les séances ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Le timing dépend de la zone traitée et des cycles de croissance des poils :
+              </p>
+              <ul>
+                <li><strong>Visage :</strong> 4-6 semaines</li>
+                <li><strong>Torse / Maillot / Aisselles :</strong> 6-8 semaines</li>
+                <li><strong>Jambes :</strong> 10-12 semaines</li>
+              </ul>
+              <p>
+                Ces intervalles permettent de cibler les poils en phase de croissance active pour une efficacité maximale.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quand vais-je voir les résultats ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Les <strong>premiers résultats sont visibles dès la première séance</strong>. Les poils tombent naturellement
+                dans les 2-3 semaines suivant le traitement. Les résultats s'améliorent progressivement après chaque séance,
+                avec une réduction significative visible après 3-4 séances.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety & Precautions -->
+    <section id="safety" class="section faq-section">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-subtitle">SÉCURITÉ</span>
+          <h2 class="category-title">Sécurité & Précautions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Y a-t-il des risques liés au laser ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Le laser <strong>n'émet ni UV ni rayons X, uniquement une lumière infrarouge ciblée</strong>. Les effets sont
+                limités à des rougeurs ou de petites croûtes temporaires, facilement apaisées avec du gel d'aloe vera.
+                Nos praticiens certifiés appliquent des protocoles de sécurité stricts.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quelles sont les contre-indications ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Les contre-indications incluent :</strong></p>
+              <ul>
+                <li>Bronzage récent (soleil ou cabine UV)</li>
+                <li>Grossesse et allaitement</li>
+                <li>Médicaments photosensibilisants</li>
+                <li>Vitiligo</li>
+                <li>Poils blancs, blonds ou roux (peu de mélanine)</li>
+                <li>Produits autobronzants récents</li>
+                <li>Herpès actif ou hémorroïdes dans la zone de traitement</li>
+              </ul>
+              <p>Nous évaluons chaque cas lors de la consultation gratuite.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Que dois-je faire avant le traitement ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Préparation avant la séance :</strong></p>
+              <ul>
+                <li><strong>Rasez la zone</strong> 24 heures avant (pas plus tôt)</li>
+                <li>Gardez la peau propre : <strong>pas de lotions, déodorant ou crèmes</strong> le jour du traitement</li>
+                <li>Portez des <strong>vêtements confortables et amples</strong></li>
+                <li><strong>Évitez le soleil</strong> 4 semaines avant</li>
+                <li><strong>Pas d'épilation à la cire ou pince</strong> 4 semaines avant</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qu'est-ce que je dois éviter après les séances ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Pendant 24-48 heures après la séance, évitez :</strong></p>
+              <ul>
+                <li>Douches très chaudes</li>
+                <li>Piscine et sauna</li>
+                <li>Exercice intense</li>
+                <li>Exposition directe au soleil</li>
+                <li>Autres méthodes d'épilation (cire, pince)</li>
+              </ul>
+              <p>
+                Utilisez une <strong>protection solaire SPF 50+</strong> si une exposition est nécessaire.
+                Hydratez quotidiennement la zone traitée.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Cases -->
+    <section id="specific" class="section faq-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-subtitle">CAS SPÉCIFIQUES</span>
+          <h2 class="category-title">Questions Spécifiques</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>L'épilation laser du visage est-elle sûre ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Absolument.</strong> Le traitement laser facial sur la lèvre supérieure ou le menton est très efficace
+                et sûr lorsqu'il est effectué par des spécialistes formés. Des réglages précis et une protection oculaire
+                complète garantissent votre sécurité.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Le rasage rend-il les poils plus épais ou plus foncés ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Non.</strong> Le rasage coupe le poil à son point le plus large ; la repousse paraît plus épaisse mais
+                la structure du poil, son épaisseur et sa couleur restent inchangés. C'est un mythe courant sans fondement scientifique.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Puis-je me faire épiler pendant la grossesse ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Non recommandé.</strong> Par principe de précaution, nous ne traitons pas les femmes enceintes ou allaitantes,
+                même si aucun danger n'a été prouvé. Il est préférable d'attendre la fin de la grossesse et de l'allaitement.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Le laser fonctionne-t-il sur les poils clairs ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Le laser cible la <strong>mélanine (pigment)</strong> dans le poil. Les poils très clairs (blonds, blancs, roux)
+                contiennent peu de mélanine et répondent donc mal au traitement laser. Les poils foncés donnent les meilleurs résultats.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Combien coûte l'épilation laser ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Les tarifs varient selon les zones traitées. Nous proposons des <strong>forfaits 8 séances à -50%</strong>
+                sur une sélection de zones populaires. Consultez notre <a href="/tarifs">page tarifs</a> pour plus de détails,
+                ou contactez-nous pour un devis personnalisé gratuit.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Puis-je m'exposer au soleil après les séances ?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Non, pas immédiatement.</strong> Évitez toute exposition solaire directe pendant au moins 2 semaines
+                après chaque séance. Si l'exposition est inévitable, utilisez une protection solaire SPF 50+ et couvrez la zone
+                traitée. Le bronzage peut augmenter les risques de complications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="section contact-cta-section">
+      <div class="container">
+        <div class="contact-cta-card">
+          <div class="cta-content">
+            <h2>Vous avez d'autres questions ?</h2>
+            <p>
+              Notre équipe d'experts est à votre disposition pour répondre à toutes vos questions lors d'une consultation gratuite.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary">Consultation gratuite</a>
+            <a href="tel:+32491769639" class="btn btn-outline">Appeler : 0491 76 96 39</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  /* FAQ Navigation */
+  .faq-nav-section {
+    padding: 2rem 1.5rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .faq-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .category-link {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow);
+  }
+
+  .category-link:hover {
+    background: var(--primary-gold);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Category Headers */
+  .category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .category-subtitle {
+    display: inline-block;
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .category-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--dark-text);
+    font-weight: 800;
+  }
+
+  /* FAQ List */
+  .faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.75rem 2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    transition: all var(--transition-normal);
+  }
+
+  .faq-question:hover {
+    color: var(--primary-gold);
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    color: var(--primary-gold);
+    transition: transform var(--transition-normal);
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 1000px;
+  }
+
+  .faq-answer > div {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .faq-answer p {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer strong {
+    color: var(--dark-text);
+  }
+
+  .faq-answer ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .faq-answer li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--light-text);
+    line-height: 1.6;
+  }
+
+  .faq-answer li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .faq-answer a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .faq-answer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Contact CTA Section */
+  .contact-cta-section {
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+  }
+
+  .contact-cta-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 4rem 3rem;
+    box-shadow: var(--shadow-hover);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    color: var(--light-text);
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .cta-actions .btn {
+    white-space: nowrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .contact-cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cta-actions {
+      width: 100%;
+    }
+
+    .cta-actions .btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-categories {
+      gap: 1rem;
+    }
+
+    .category-link {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .faq-question {
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-answer > div {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // FAQ Accordion
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question?.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement;
+            if (otherAnswer) otherAnswer.style.maxHeight = '0';
+          }
+        });
+
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          if (answer instanceof HTMLElement) {
+            answer.style.maxHeight = '0';
+          }
+        } else {
+          item.classList.add('active');
+          if (answer instanceof HTMLElement) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        }
+      });
+    });
+
+    // Smooth scroll for category links
+    document.querySelectorAll('.category-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        if (targetId) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  });
+</script>

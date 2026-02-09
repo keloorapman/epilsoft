@@ -1,0 +1,718 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import { translations } from '../i18n';
+
+const lang = 'fr';
+const t = translations[lang];
+---
+
+<Layout
+  title="Traitement Épilation Laser | Processus et Zones - Epilsoft"
+  description="Découvrez notre processus de traitement laser en 4 étapes. Épilation définitive pour toutes les zones du corps, hommes et femmes. Consultation gratuite."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <main>
+    <!-- Hero Section -->
+    <Hero
+      badge="TRAITEMENT"
+      subtitle="Épilation Laser Définitive"
+      title="Votre Parcours vers une Peau Lisse"
+      description="Un processus en 4 étapes pour des résultats durables. Épilation laser pour femmes et hommes dans nos centres de Bruxelles."
+      ctaText="Consultation gratuite"
+      ctaLink="/contact"
+      image="/images/hero-treatment.jpg"
+    />
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">AVANTAGES</span>
+          <h2 class="section-title">Pourquoi Choisir l'Épilation Laser ?</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card animate">
+            <div class="benefit-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>Gain de Temps & d'Argent</h3>
+            <p>Économisez sur les méthodes temporaires et libérez votre temps. Plus besoin de rasage ou d'épilation régulière.</p>
+          </div>
+
+          <div class="benefit-card animate">
+            <div class="benefit-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Élimination des Poils Incarnés</h3>
+            <p>Fini les irritations du rasoir et les poils incarnés douloureux. Une peau parfaitement lisse.</p>
+          </div>
+
+          <div class="benefit-card animate">
+            <div class="benefit-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <h3>Performance Supérieure</h3>
+            <p>Notre technologie laser médicale surpasse les autres méthodes d'épilation en efficacité et durabilité.</p>
+          </div>
+
+          <div class="benefit-card animate">
+            <div class="benefit-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Solution Sûre & Durable</h3>
+            <p>Traitement sécuritaire avec des résultats définitifs. Plus de 30 ans d'évidence clinique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">NOTRE PROCESSUS</span>
+          <h2 class="section-title">Traitement en 4 Étapes</h2>
+          <p class="section-description">
+            Un parcours structuré pour garantir votre confort et maximiser les résultats
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step animate">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Séance d'Information Gratuite</h3>
+              <p>
+                Nous effectuons toujours un rendez-vous d'information gratuit pour vous fournir
+                tous les détails nécessaires. Nous créons des devis personnalisés basés sur
+                votre type de peau et vos besoins spécifiques.
+              </p>
+              <ul class="step-features">
+                <li>Analyse de votre type de peau</li>
+                <li>Devis personnalisé gratuit</li>
+                <li>Réponses à toutes vos questions</li>
+                <li>Aucun engagement requis</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step animate">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Séance de Traitement</h3>
+              <p>
+                Les séances se déroulent dans un environnement professionnel utilisant des
+                équipements de dernière génération. Nos praticiens certifiés et expérimentés
+                privilégient votre confort et votre sécurité.
+              </p>
+              <ul class="step-features">
+                <li>Équipement laser de pointe</li>
+                <li>Praticiens certifiés et expérimentés</li>
+                <li>Protocoles de sécurité stricts</li>
+                <li>Confort optimal durant la séance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step animate">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Résultats Progressifs</h3>
+              <p>
+                Les résultats apparaissent progressivement après chaque séance. Réduction
+                visible des poils en quelques semaines et peau de plus en plus lisse
+                tout au long du traitement.
+              </p>
+              <ul class="step-features">
+                <li>Résultats visibles dès la 1ère séance</li>
+                <li>Amélioration progressive</li>
+                <li>Réduction de 85%+ des poils</li>
+                <li>Peau douce et lisse durable</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step animate">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Suivi & Entretien</h3>
+              <p>
+                Un suivi régulier permet d'ajuster le traitement si nécessaire. Nous vous
+                fournissons des conseils personnalisés pour maintenir vos résultats à
+                long terme.
+              </p>
+              <ul class="step-features">
+                <li>Monitoring régulier des résultats</li>
+                <li>Ajustements personnalisés</li>
+                <li>Conseils d'entretien</li>
+                <li>Support continu</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatment Areas -->
+    <section class="section areas-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ZONES DE TRAITEMENT</span>
+          <h2 class="section-title">Toutes les Zones du Corps</h2>
+          <p class="section-description">
+            Épilation laser pour femmes et hommes sur toutes les zones
+          </p>
+        </div>
+
+        <div class="areas-wrapper">
+          <div class="areas-column">
+            <h3 class="areas-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Femmes
+            </h3>
+            <ul class="areas-list">
+              <li>Visage (duvet, lèvre supérieure, menton)</li>
+              <li>Aisselles</li>
+              <li>Bras complets ou demi-bras</li>
+              <li>Maillot (classique, échancré, intégral)</li>
+              <li>Jambes complètes ou demi-jambes</li>
+              <li>Dos et épaules</li>
+              <li>Ventre</li>
+              <li>Poitrine</li>
+            </ul>
+          </div>
+
+          <div class="areas-column">
+            <h3 class="areas-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Hommes
+            </h3>
+            <ul class="areas-list">
+              <li>Barbe et cou</li>
+              <li>Torse et abdomen</li>
+              <li>Dos complet</li>
+              <li>Épaules</li>
+              <li>Bras</li>
+              <li>Jambes</li>
+              <li>Zone intime</li>
+              <li>Zones personnalisées</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="/tarifs" class="btn btn-primary">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After Care -->
+    <section class="section care-section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">CONSEILS</span>
+          <h2 class="section-title">Avant & Après la Séance</h2>
+        </div>
+
+        <div class="care-grid">
+          <div class="care-card">
+            <div class="care-icon before">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Avant la Séance</h3>
+            <ul class="care-list">
+              <li>
+                <strong>Rasez la zone</strong> 24-48h avant la séance
+              </li>
+              <li>
+                <strong>Évitez le soleil</strong> 4 semaines avant le traitement
+              </li>
+              <li>
+                <strong>Pas d'épilation à la cire</strong> ou pince 4 semaines avant
+              </li>
+              <li>
+                <strong>Peau propre</strong> sans crème, maquillage ou déodorant
+              </li>
+              <li>
+                <strong>Hydratez votre peau</strong> régulièrement les jours précédents
+              </li>
+            </ul>
+          </div>
+
+          <div class="care-card">
+            <div class="care-icon after">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Après la Séance</h3>
+            <ul class="care-list">
+              <li>
+                <strong>Évitez le soleil</strong> pendant 2 semaines minimum
+              </li>
+              <li>
+                <strong>Appliquez une crème apaisante</strong> si recommandée
+              </li>
+              <li>
+                <strong>Pas de sauna, hammam</strong> ou exercice intense 48h
+              </li>
+              <li>
+                <strong>Hydratez quotidiennement</strong> la zone traitée
+              </li>
+              <li>
+                <strong>Protection solaire SPF 50+</strong> si exposition nécessaire
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Standards -->
+    <section class="section standards-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">STANDARDS PROFESSIONNELS</span>
+          <h2 class="section-title">Excellence & Sécurité</h2>
+        </div>
+
+        <div class="standards-grid">
+          <div class="standard-card animate">
+            <div class="standard-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Formation Continue</h3>
+            <p>Formation spécialisée via Epilsoft Academy avec mise à jour régulière des compétences</p>
+          </div>
+
+          <div class="standard-card animate">
+            <div class="standard-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Protocoles d'Hygiène</h3>
+            <p>Désinfection des équipements après chaque séance selon protocoles stricts</p>
+          </div>
+
+          <div class="standard-card animate">
+            <div class="standard-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Expertise Certifiée</h3>
+            <p>Praticiens certifiés avec recommandations d'espacement optimal entre séances</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);">
+      <div class="container text-center">
+        <span class="badge">RÉSERVATION GRATUITE</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin: 1.5rem 0;">
+          Consultation Gratuite avec Devis Personnalisé
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--light-text); max-width: 600px; margin: 0 auto 2rem;">
+          Obtenez des réponses immédiates à vos questions. Aucun engagement requis.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/contact" class="btn btn-primary">Réserver ma consultation</a>
+          <a href="/faq" class="btn btn-secondary">Questions fréquentes</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  /* Benefits Section */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .benefit-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* Process Section */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: all var(--transition-normal);
+  }
+
+  .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .step-number {
+    position: absolute;
+    top: -20px;
+    left: 2.5rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gold);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-title);
+    box-shadow: 0 4px 15px rgba(198, 153, 99, 0.3);
+  }
+
+  .step-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .step-content p {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-features {
+    list-style: none;
+    padding: 0;
+  }
+
+  .step-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--light-text);
+  }
+
+  .step-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+  }
+
+  /* Treatment Areas */
+  .areas-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .areas-column {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .areas-title {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .areas-title svg {
+    color: var(--primary-gold);
+  }
+
+  .areas-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .areas-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--light-text);
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .areas-list li:last-child {
+    border-bottom: none;
+  }
+
+  .areas-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  /* Care Section */
+  .care-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .care-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+  }
+
+  .care-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .care-icon.before {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  }
+
+  .care-icon.before svg {
+    color: #1976d2;
+  }
+
+  .care-icon.after {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  }
+
+  .care-icon.after svg {
+    color: #388e3c;
+  }
+
+  .care-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .care-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .care-list li {
+    padding: 1rem 0;
+    color: var(--light-text);
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .care-list li:last-child {
+    border-bottom: none;
+  }
+
+  .care-list strong {
+    color: var(--dark-text);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Standards Section */
+  .standards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .standard-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .standard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .standard-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .standard-icon svg {
+    color: var(--primary-gold);
+  }
+
+  .standard-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+  }
+
+  .standard-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid,
+    .areas-wrapper,
+    .care-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .standards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefit-card,
+    .process-step,
+    .care-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Animation on scroll
+  const animateElements = document.querySelectorAll('.animate');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('play');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  animateElements.forEach(el => observer.observe(el));
+</script>

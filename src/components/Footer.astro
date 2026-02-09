@@ -1,0 +1,371 @@
+---
+import { translations } from '../i18n';
+import CookieSettings from './CookieSettings.astro';
+
+interface Props {
+  lang?: 'fr' | 'en' | 'nl';
+}
+
+const { lang = 'fr' } = Astro.props;
+const t = translations[lang];
+const currentYear = new Date().getFullYear();
+
+// Préfixe de langue pour les URLs
+const langPrefix = lang === 'fr' ? '' : `/${lang}`;
+---
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-column footer-white">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="brand-name">Epilsoft</h3>
+          <p class="brand-tagline">Épilation Laser Définitive</p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Centre Uccle</h4>
+          <p>Chaussée d'Alsemberg 630<br>1180 Uccle</p>
+          <p class="phone"><a href="tel:+32491769639">0491 76 96 39</a></p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Centre Etterbeek</h4>
+          <p>Avenue d'Auderghem 156<br>1040 Etterbeek</p>
+          <p class="phone"><a href="tel:+32491769639">0491 76 96 39</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-column footer-gray">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h4>Horaires</h4>
+          <p>Lun - Ven: 09:00 - 20:00<br>Sam: 10:00 - 18:00<br><em>Sur rendez-vous uniquement</em></p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="https://facebook.com/epilsoft" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/epilsoft" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+              </svg>
+            </a>
+            <a href="https://tiktok.com/@epilsoft" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com/@epilsoft" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <h4>Navigation</h4>
+          <nav class="footer-nav">
+            <a href={`${langPrefix}/technologie`}>Technologie</a>
+            <a href={`${langPrefix}/traitement`}>Traitement</a>
+            <a href={`${langPrefix}/tarifs`}>Tarifs</a>
+            <a href={`${langPrefix}/centres`}>Centres</a>
+            <a href={`${langPrefix}/faq`}>FAQ</a>
+            <a href={`${langPrefix}/blog`}>Blog</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <p>&copy; {currentYear} Epilsoft. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href={`${langPrefix}/mentions-legales`}>Mentions légales</a>
+          <span class="divider">|</span>
+          <a href={`${langPrefix}/politique-confidentialite`} id="cookie-settings-link">Confidentialité</a>
+          <span class="divider">|</span>
+          <a href={`${langPrefix}/contact`}>Contact</a>
+        </div>
+        <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Popup -->
+  <CookieSettings />
+</footer>
+
+<style>
+  /* Footer Semeraro Style */
+  .footer {
+    margin-top: var(--spacing-xxl);
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-column {
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer-white {
+    background-color: var(--background-white);
+    color: var(--dark-text);
+  }
+
+  .footer-gray {
+    background-color: var(--background-light);
+    color: var(--dark-text);
+  }
+
+  .footer-content {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .footer-brand {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .brand-name {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .brand-tagline {
+    font-size: 15px;
+    color: var(--light-text);
+    font-style: italic;
+  }
+
+  .footer-info {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .footer-info h4 {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-gold);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-info p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-info em {
+    font-size: 14px;
+    color: var(--primary-gold);
+  }
+
+  .phone a {
+    font-weight: 600;
+    color: var(--dark-text);
+    transition: color var(--transition-fast);
+  }
+
+  .phone a:hover {
+    color: var(--primary-gold);
+  }
+
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-links a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-gold);
+    color: var(--background-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+  }
+
+  .social-links a:hover {
+    background-color: var(--gold-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(191, 164, 119, 0.3);
+  }
+
+  /* Footer Navigation */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav a {
+    font-size: 15px;
+    color: var(--light-text);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-nav a:hover {
+    color: var(--primary-gold);
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    background-color: var(--darker-bg);
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--primary-gold);
+  }
+
+  .divider {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Back to Top Button */
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-gold);
+    color: var(--background-white);
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(191, 164, 119, 0.4);
+  }
+
+  .back-to-top.visible {
+    display: flex;
+  }
+
+  .back-to-top:hover {
+    background-color: var(--gold-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(191, 164, 119, 0.5);
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .footer-content {
+      padding: 0 var(--spacing-md);
+    }
+
+    .social-links {
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .back-to-top {
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+</style>
+
+<script>
+  // Back to top button
+  const backToTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+      backToTop?.classList.add('visible');
+    } else {
+      backToTop?.classList.remove('visible');
+    }
+  });
+
+  backToTop?.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>

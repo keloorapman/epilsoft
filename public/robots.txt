@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://epilsoft.be/sitemap.xml

@@ -1,0 +1,1237 @@
+---
+import LayoutMinimal from '../layouts/LayoutMinimal.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const lang = 'fr';
+---
+
+<LayoutMinimal
+  title="Tarifs Épilation Laser | Prix et Forfaits - Epilsoft"
+  description="Découvrez nos tarifs d'épilation laser. Pack 8 séances à -50%. Paiement en 2 ou 3 fois sans frais. Consultation gratuite incluse."
+  lang={lang}
+>
+  <Header lang={lang} />
+
+  <main>
+    <div class="banner-container">
+        <div class="banner-header">
+            <div style="display: flex; align-items: baseline; flex-wrap: wrap;">
+                <h1>EPILSOFT</h1>
+                <p style="margin-left: 0.5rem;">NOS PROMOTIONS ET TARIFS</p>
+            </div>
+            <a href="https://epilsoft.be/rendez-vous/" class="btn-reserver btn-reserver-desktop">RÉSERVER</a>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide slide-desktop">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/promo-epilation-laser-promo-50-aissellesmaillot.webp" alt="Promotion Epilsoft : 8 séances d'épilation laser à -35%" />
+                    </div>
+                    <div class="slide slide-desktop">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-50-pack-8-seances-Epaules-Contour-barbe.webp" alt="Promotion Epilsoft : 5 séances d'épilation laser à -25%" />
+                    </div>
+                    <div class="slide slide-desktop">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35.webp" alt="Offre parrainage Epilsoft pour l'épilation laser" />
+                    </div>
+                    <div class="slide slide-desktop">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Promo-epilation-laser-pack-8-seance.webp" alt="Offre parrainage Epilsoft pour l'épilation laser" />
+                    </div>
+                    <div class="slide slide-desktop">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Epilsoft-–-Parrainage-epilation-laser-_-parrainez-gagnez.webp" alt="Promotion Epilsoft sur les forfaits d'épilation laser" />
+                    </div>
+                    <div class="slide slide-mobile">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-femmes-_-50.webp" alt="Offre parrainage Epilsoft - vue mobile" />
+                    </div>
+                    <div class="slide slide-mobile">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/10/Pack-8-seances-hommes-_-50.webp" alt="Promotion épilation laser visage - vue mobile" />
+                    </div>
+                    <div class="slide slide-mobile">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/pack-epilation-laser-5-seances-reduction-25-8-seances-promo-35-1.webp" alt="Promotion épilation laser maillot - vue mobile" />
+                    </div>
+                    <div class="slide slide-mobile">
+                        <img src="https://epilsoft.be/wp-content/uploads/2025/09/parrainage-epilation-laser-offre-1.webp" alt="Promotion épilation laser jambes complètes - vue mobile" />
+                    </div>
+                </div>
+            </div>
+            <button class="slider-arrow prev" aria-label="Précédent">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="slider-arrow next" aria-label="Suivant">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+        <a href="https://epilsoft.be/rendez-vous/" class="btn-reserver btn-reserver-mobile">RÉSERVER</a>
+    </div>
+
+    <section id="benefits">
+        <div>
+            <h2>CENTRE D'ÉPILATION LASER EPILSOFT</h2>
+            <p class="section-intro">
+                Chez EPILSOFT, nous offrons un service spécialisé en épilation définitive au laser. Notre objectif est de fournir des résultats durables pour tous les types de peau, avec une réduction significative de la pilosité dès les premières séances. Notre épilation laser est réalisée par des professionnels qualifiés, utilisant des lasers de grade médical pour assurer une efficacité maximale tout en respectant la sécurité de votre peau.
+            </p>
+            <div class="benefits-slider-container slider-wrapper">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+                        </div>
+                        <h3>SÉANCE D'INFORMATION + SÉANCE LASER OFFERTES</h3>
+                        <p class="benefit-text-original">Bénéficiez d'une consultation et d'une séance laser offertes.</p>
+                        <div class="benefit-text-hover">
+                            <p>La première consultation est offerte pour vous fournir les informations nécessaires au bon déroulement du traitement et un devis personnalisé.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                             <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5l-1.89 3.2-3.61.82.34 3.69L1 12l2.44 2.79-.34 3.69 3.61.82 1.89 3.2L12 21.04l3.4 1.46 1.89-3.2 3.61-.82-.34-3.69L23 12zm-10 5l-4-4 1.41-1.41L13 14.17l5.59-5.59L20 10l-7 7z"/></svg>
+                        </div>
+                        <h3>EXPERTISE CERTIFIÉE</h3>
+                        <p class="benefit-text-original">Des techniciennes laser formées par des médecins pour des soins personnalisés.</p>
+                        <div class="benefit-text-hover">
+                            <p>Votre sécurité est notre priorité. Nos techniciennes laser sont formées par des médecins pour un suivi et des soins personnalisés.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                             <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.48 0-2.85.43-4.01 1.17L6.16 3.72C5.77 3.33 5.14 3.33 4.75 3.72L2.27 6.2c-.39.39-.39 1.02 0 1.41L5.1 10.44c-1.64.94-2.92 2.44-3.08 4.27L2 15v3c0 1.1.9 2 2 2h5v-3c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5v3h5c1.1 0 2-.9 2-2v-3c-.01-2.61-1.72-4.92-4.22-5.72-.62-2.07-2.21-3.79-4.43-4.24zM12 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                        </div>
+                        <h3>LASERS MÉDICAUX</h3>
+                        <p class="benefit-text-original">Technologies de pointe pour un traitement efficace et sûr.</p>
+                        <div class="benefit-text-hover">
+                            <p>Nous investissons dans les meilleures technologies pour garantir des résultats durables, efficaces et adaptés à votre peau.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <svg class="benefit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm-2 14H7V9h10v9z"/><path d="M0 0h24v24H0z" fill="none"/><text x="12" y="15.5" font-family="Arial, sans-serif" font-size="5.5" fill="currentColor" text-anchor="middle" dy=".1em" style="font-weight:bold;">€</text></svg>
+                        </div>
+                        <h3>PAIEMENT EN 2 OU 3 FOIS</h3>
+                        <p class="benefit-text-original">Profitez de facilités de paiement pour étaler vos séances sans frais.</p>
+                        <div class="benefit-text-hover">
+                            <p>Investissez dans votre bien-être sans alourdir votre budget. Payez vos forfaits en 2 ou 3 fois, sans frais.</p>
+                        </div>
+                    </div>
+                </div>
+                 <button class="slider-arrow prev" aria-label="Précédent">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="slider-arrow next" aria-label="Suivant">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="tarifs-intro">
+  <h2 style="text-align: center;">PRIX DE L'ÉPILATION LASER</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 1.5rem auto;">
+      Veuillez sélectionner votre genre, le nombre de séances (À la séance, 5 séances, 8 séances ou Forfaits) et la
+      zone du corps pour afficher les prix correspondants.<br>
+      N.B. 💳 Paiement possible en 2 ou 3 fois sans frais pour nos forfaits de 5 ou 8 séances.
+  </p>
+
+<div class="promo-section-container">
+    <div class="promo-card-50">
+        <div class="promo-card-header">
+            <span class="tag">Offre Spéciale</span>
+            <h2>Pack 8 Séances à <strong>-50%</strong></h2>
+            <p>L'offre la plus avantageuse sur une sélection de nos forfaits les plus populaires pour femmes et hommes.</p>
+        </div>
+        <div class="promo-card-grid">
+            <div class="promo-column elle">
+                <h3>
+                    <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="7" r="4" /><path d="M12 11v10" /><path d="M8 17h8" /></svg>
+                    Pour Elle
+                </h3>
+                <ul>
+                    <li>
+                        <span class="pack-name">Aisselles + Demi-jambes</span>
+                        <span class="price-container">
+                            <del class="original-price">1520€</del>
+                            <span class="promo-price">760€</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pack-name">Aisselles + Maillot classique</span>
+                        <span class="price-container">
+                            <del class="original-price">808€</del>
+                            <span class="promo-price">404€</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pack-name">Aisselles + Maillot échancré</span>
+                        <span class="price-container">
+                            <del class="original-price">984€</del>
+                            <span class="promo-price">492€</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pack-name">Aisselles + Maillot complet</span>
+                        <span class="price-container">
+                            <del class="original-price">1120€</del>
+                            <span class="promo-price">560€</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="promo-column lui">
+                <h3>
+                    <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="7" r="4" /><path d="M12 11v10" /><path d="m12 19 4-4" /><path d="m12 19-4-4" /></svg>
+                    Pour Lui
+                </h3>
+                <ul>
+                    <li>
+                        <span class="pack-name">Contour barbe cou + Épaules</span>
+                        <span class="price-container">
+                            <del class="original-price">1072€</del>
+                            <span class="promo-price">536€</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="pack-name">Contour barbe joues + Épaules</span>
+                        <span class="price-container">
+                            <del class="original-price">1072€</del>
+                            <span class="promo-price">536€</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+    <div class="sgz-wrapper">
+        <div class="sgz-container">
+            <div class="sgz-label">Nombre de séances</div>
+            <div class="sgz-row" id="sgz-sessions"></div>
+            <div id="sgz-installments" class="sgz-installments"></div>
+            <div class="sgz-label">Genre</div>
+            <div class="sgz-row" id="sgz-genders"></div>
+            <div class="sgz-label" id="sgz-zones-label">Zones du corps</div>
+            <div class="sgz-row" id="sgz-zones"></div>
+            <table class="sgz-table" id="sgz-table"></table>
+        </div>
+    </div>
+
+    <section id="reserve-info">
+        <div class="texte">
+            <h2>RÉSERVEZ VOTRE SÉANCE D'INFORMATION OFFERTE</h2>
+            <p>
+                Intéressé(e) par l'épilation laser ? Prenez rendez-vous pour une consultation gratuite avec l'un de nos
+                spécialistes laser pour en savoir plus sur le processus, poser toutes vos questions et recevoir un
+                devis personnalisé en fonction de vos besoins.
+            </p>
+            <a href="https://epilsoft.be/rendez-vous/" class="btn-reserver">RÉSERVER</a>
+        </div>
+        <div class="image">
+            <img src="https://epilsoft.be/wp-content/uploads/2025/02/Epilation-laser-Epilsoft-Premier-Rendez-vous.webp"
+                 alt="Consultation gratuite pour l'épilation laser chez Epilsoft" />
+        </div>
+    </section>
+
+    <section id="faq">
+        <div>
+            <h2>Foire Aux Questions</h2>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+</span>
+                    Pourquoi choisir notre centre d'épilation laser ?
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        Notre équipe de spécialistes en épilation laser vous accompagne tout au long de votre traitement,
+                        en vous offrant des conseils personnalisés pour préparer et optimiser chaque séance. Le traitement
+                        est rapide, avec des sessions adaptées à votre emploi du temps et des résultats visibles dès les premières séances. Avant de commencer,
+                        une séance d'information préalable est effectuée pour évaluer le type de peau, la couleur et la texture des poils, ainsi que d'autres
+                        facteurs individuels (âge, médication). Cette évaluation approfondie définit les paramètres optimaux du laser,
+                        assurant une efficacité maximale tout en minimisant les risques d'effets secondaires. Nos lasers médicaux intègrent
+                        une technologie de refroidissement avancée, rendant l'épilation laser quasi indolore, particulièrement appréciée pour les zones sensibles.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+</span>
+                    Une solution durable pour une peau douce
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        L'épilation laser est devenue une méthode incontournable pour ceux qui souhaitent se débarrasser durablement des poils indésirables.
+                        Dans notre centre Epilsoft, nous avons développé une approche combinant efficacité, sécurité et confort, en utilisant
+                        des technologies de pointe adaptées à tous les types de peau. Nos lasers médicaux sont conçus pour cibler les follicules pileux
+                        avec précision, tout en préservant l'intégrité de la peau environnante. Cela garantit non seulement une réduction significative
+                        de la pilosité après quelques séances, mais aussi une expérience de traitement confortable, même pour les zones sensibles
+                        (visage, maillot).
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+</span>
+                    Pourquoi opter pour l'épilation laser ?
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        L'un des principaux avantages de l'épilation laser réside dans sa capacité à offrir des résultats durables. Contrairement aux méthodes traditionnelles
+                        (cire, rasage), qui nécessitent des séances fréquentes et peuvent provoquer des irritations, l'épilation laser
+                        cible directement la racine du poil. En absorbant l'énergie lumineuse, la mélanine du follicule pileux chauffe et
+                        détruit la racine. Réalisé sous la supervision de professionnels qualifiés, ce processus traite efficacement
+                        tous les types de peau (claire ou foncée) et réduit progressivement la repousse. Pour obtenir une épilation quasi définitive,
+                        plusieurs séances sont généralement nécessaires (5 à 8 pour les peaux claires, 9 à 12 pour les peaux foncées), espacées de plusieurs semaines
+                        selon la zone traitée.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+</span>
+                    Conseils pour maximiser les résultats
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        Après chaque séance, il est courant de ressentir de légères rougeurs ou un gonflement de la zone traitée, mais ces effets
+                        disparaissent généralement en 24 heures. Pour accélérer la cicatrisation, nous recommandons d'adopter quelques bonnes pratiques de soin :
+                    </p>
+                    <ul>
+                        <li>Hydratez régulièrement votre peau avec une crème sans parfum et hypoallergénique, ou appliquez du gel d'Aloe Vera (disponible dans nos centres Epilsoft) pendant 3 à 4 jours après le traitement.</li>
+                        <li>Protégez votre peau avec un écran solaire à large spectre (SPF 50) sur les zones traitées à chaque sortie.</li>
+                        <li>Buvez suffisamment d'eau au quotidien pour maintenir une bonne hydratation, ce qui aide la peau à se régénérer et à rester souple.</li>
+                    </ul>
+                    <p>
+                        Pour ceux qui recherchent une solution durable à la pilosité, notre centre Epilsoft propose des forfaits avantageux pour
+                        plusieurs zones, vous permettant de combiner les traitements tout en bénéficiant de remises attractives. Ces offres sont idéales
+                        pour les personnes souhaitant traiter des zones plus larges ou multiples (jambes, aisselles, maillot). Notre objectif est de rendre l'épilation
+                        laser accessible et abordable tout en maintenant un haut niveau de qualité et de sécurité. Prendre rendez-vous
+                        chez Epilsoft, c'est choisir une expertise médicale reconnue et une technologie de pointe pour obtenir une peau lisse, douce et sans poils,
+                        sans les contraintes des méthodes traditionnelles.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-cta-container">
+                <a href="https://epilsoft.be/faq/" class="btn-reserver">Consulter notre FAQ complète</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+  <Footer lang={lang} />
+</LayoutMinimal>
+
+<style is:global>
+/* =============================
+VARIABLES & RESET - STYLE SEMERARO
+============================= */
+:root {
+  --color-primary: #bfa477;
+  --color-dark: #222;
+  --color-text: #555;
+  --color-bg-light: #f4f4f4;
+  --color-border: #e0e0e0;
+  --transition: all 400ms ease;
+  --shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+* { box-sizing: border-box; }
+main img { display: block; max-width: 100%; height: auto; }
+
+/* =============================
+STYLES DES FLÈCHES (PLUS VISIBLES)
+============================= */
+.slider-wrapper {
+    position: relative;
+}
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.slider-arrow:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-50%) scale(1.05);
+}
+.slider-arrow svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--color-primary);
+    stroke-width: 2.5px;
+    transition: var(--transition);
+}
+.slider-arrow:hover svg {
+    stroke: #fff;
+}
+.slider-arrow.prev { left: 1.5rem; }
+.slider-arrow.next { right: 1.5rem; }
+.dots-container, .benefits-dots-container, .promo-dots-container {
+    display: none !important;
+}
+
+/* =============================
+BANNIÈRE / SLIDER PRINCIPAL
+============================= */
+.banner-container { max-width: 1080px; margin: 100px auto; padding: 0 1rem; }
+.banner-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 3rem; }
+.banner-header h1 {
+  font-family: 'PT Serif', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--color-primary);
+  margin: 0;
+  letter-spacing: 1px;
+}
+.banner-header p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.btn-reserver {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 30px;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btn-reserver:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.btn-reserver-mobile { display: none; }
+
+.slider {
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1190 / 470;
+    height: auto;
+    width: 100%;
+}
+.slides { display: flex; height: 100%; transition: transform 0.5s ease-in-out; }
+.slide { flex: 0 0 100%; box-sizing: border-box; height: 100%; }
+.slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.slide-desktop { display: flex !important; }
+.slide-mobile { display: none !important; }
+
+/* --- Tablette (900px) --- */
+@media (max-width: 900px) {
+    .banner-header { flex-direction: column; align-items: flex-start; }
+    .banner-header h1 { margin-bottom: 1rem; }
+    .slider-arrow.prev { left: 0.5rem; }
+    .slider-arrow.next { right: 0.5rem; }
+}
+
+/* --- Mobile (600px) --- */
+@media (max-width: 600px) {
+    .banner-container { margin: 0; padding: 0; max-width: none; }
+    .banner-header { padding: 2rem 1rem 1rem 1rem; }
+    .btn-reserver-desktop { display: none; }
+    .btn-reserver-mobile { display: block; width: 90%; max-width: 400px; margin: 1.5rem auto 2rem auto; }
+    .slider {
+        border-radius: 0;
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+    .slide img { border-radius: 0; }
+    .slide-desktop { display: none !important; }
+    .slide-mobile { display: flex !important; }
+}
+
+/* =============================
+SECTION BÉNÉFICES - STYLE SEMERARO
+============================= */
+#benefits {
+  padding: 100px 1rem;
+  text-align: center;
+  background: var(--color-bg-light);
+}
+#benefits > div { max-width: 1080px; margin: 0 auto; }
+#benefits h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+#benefits p.section-intro {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  line-height: 1.8;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.benefit-card {
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 50px 30px;
+  text-align: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+.benefit-icon-container {
+  margin-bottom: 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--color-primary);
+  transition: var(--transition);
+}
+.benefit-card h3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+  min-height: 3em;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.benefit-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+.benefit-text-hover { display: none; }
+.benefit-card:hover .benefit-text-original { display: none; }
+.benefit-card:hover .benefit-text-hover { display: block; }
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: var(--color-primary);
+}
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+}
+#benefits .slider-arrow { display: none; }
+@media (max-width: 768px) {
+    #benefits { padding: 3rem 1rem; }
+    .benefits-slider-container { overflow: hidden; }
+    .benefits-grid { display: flex; transition: transform 0.5s ease-in-out; gap: 0; }
+    .benefit-card { min-width: 100%; min-height: auto; }
+    #benefits .slider-arrow { display: block; width: 40px; height: 40px; padding: 8px; }
+}
+
+/* =============================
+SECTION FAQ - STYLE SEMERARO
+============================= */
+#faq {
+  padding: 100px 1rem;
+  background: #fff;
+}
+#faq > div { max-width: 900px; margin: 0 auto; }
+#faq h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+.accordion-item {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border: none;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.accordion-header:hover, .accordion-item.open .accordion-header {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.accordion-header span {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+  font-weight: 300;
+}
+.accordion-header:hover span, .accordion-item.open .accordion-header span {
+  color: #fff;
+}
+.accordion-item.open .accordion-header span {
+  transform: rotate(45deg);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.accordion-item.open .accordion-content {
+  padding: 2rem;
+  background: #fff;
+}
+.accordion-content p,
+.accordion-content li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+.accordion-content ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.faq-cta-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* =============================
+SECTIONS TARIFS & RÉSERVATION - STYLE SEMERARO
+============================= */
+#tarifs-intro {
+  padding: 80px 1rem;
+  background: var(--color-bg-light);
+}
+#tarifs-intro h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center !important;
+  letter-spacing: 0.5px;
+}
+#tarifs-intro p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.8;
+  text-align: center !important;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+#reserve-info .texte h2 {
+  text-align: left;
+  font-family: 'PT Serif', serif;
+  font-size: 35px;
+  color: var(--color-primary);
+}
+
+/* --- Conteneur principal de la section promo --- STYLE SEMERARO */
+.promo-section-container {
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--color-bg-light);
+    padding: clamp(3rem, 5vw, 5rem);
+    margin: 0;
+}
+
+.promo-card-50 {
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+/* --- En-tête de la carte --- */
+.promo-card-header {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.promo-card-header .tag {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.promo-card-header h2 {
+    font-family: 'PT Serif', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 1rem 0 0.5rem 0;
+    letter-spacing: 0.5px;
+}
+
+.promo-card-header h2 strong {
+    color: #d32f2f;
+}
+
+.promo-card-header p {
+    color: var(--color-text);
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- Grille pour les deux colonnes (Elle / Lui) --- */
+.promo-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* --- Style des colonnes --- */
+.promo-column {
+    padding: 2.5rem;
+}
+
+.promo-column.elle {
+    border-right: 1px solid #e0e0e0;
+}
+
+.promo-column h3 {
+    font-family: 'PT Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.promo-icon {
+    width: 30px;
+    height: 30px;
+    stroke-width: 2px;
+    color: #665529;
+}
+
+/* --- Liste des packs --- */
+.promo-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.promo-column li {
+    color: #555;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.promo-column li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pack-name {
+  flex-grow: 1;
+  padding-right: 1rem;
+}
+
+/* --- Conteneur pour les prix --- */
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    white-space: nowrap;
+}
+
+.original-price {
+    font-size: 0.95rem;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.promo-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d32f2f;
+}
+
+.sgz-wrapper {
+  margin: 80px auto;
+  max-width: 1080px;
+  padding: 0 1rem;
+}
+.sgz-container {
+  background: #fff;
+  padding: 50px;
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+.sgz-label {
+  width: 100%;
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+.sgz-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.sgz-btn {
+  flex: 1 1 auto;
+  min-width: calc(25% - 15px);
+  height: 60px;
+  padding: 0 20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: #fff;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.sgz-btn:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.sgz-btn.selected {
+  background: var(--color-primary);
+  color: #fff;
+}
+.sgz-installments {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: var(--color-text);
+  font-style: italic;
+}
+.sgz-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 3rem;
+  font-family: 'Barlow', sans-serif;
+}
+.sgz-table th, .sgz-table td {
+  border: 1px solid var(--color-border);
+  padding: 15px 20px;
+  text-align: center;
+}
+.sgz-table th {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+.sgz-table td:first-child {
+  text-align: left;
+  background: #fff;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+.sgz-subheader th {
+  background-color: var(--color-bg-light);
+  color: var(--color-dark);
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: none;
+}
+.sgz-table .strike {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 0.75rem;
+  font-size: 0.9em;
+}
+.sgz-table .price-large {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.sgz-table .price-small {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+.sgz-table td small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85em;
+  color: var(--color-text);
+  font-style: italic;
+}
+#reserve-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1080px;
+  margin: 100px auto;
+  padding: 50px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+#reserve-info .texte {
+  flex: 1 1 50%;
+  padding-right: 50px;
+}
+#reserve-info .texte h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+#reserve-info .texte p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+#reserve-info .image {
+  flex: 1 1 45%;
+}
+#reserve-info .image img {
+  box-shadow: var(--shadow);
+}
+@media(max-width:768px){
+  #reserve-info .texte{ flex: 1 1 100%; padding:0; margin-bottom: 2rem; text-align: center;}
+  #reserve-info .texte h2{text-align:center;}
+  .promo-section-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 2rem 0;
+  }
+  .promo-card-50 {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+  }
+  .promo-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .promo-column.elle {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-column li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+/* =================================================================== */
+/* MODIFICATIONS TABLEAU DES PRIX (TABLETTE ET MOBILE) */
+/* =================================================================== */
+@media (max-width: 900px) {
+    .sgz-wrapper {
+        margin: 2rem 0;
+        padding: 0 0.5rem;
+    }
+    .sgz-container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 1.5rem 0.5rem;
+    }
+    .sgz-label {
+        font-size: 1.4rem;
+    }
+    .sgz-row {
+        gap: 0.5rem;
+    }
+    .sgz-btn {
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+        min-width: calc(33% - 0.5rem);
+    }
+    .sgz-table th, .sgz-table td {
+        font-size: 1.05rem;
+        padding: 1rem 0.5rem;
+    }
+    .sgz-table .price-large {
+        font-size: 1.4rem;
+    }
+    .sgz-installments {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 600px) {
+    .sgz-wrapper {
+        padding: 0;
+    }
+    .sgz-container {
+        padding: 1.5rem 0.25rem;
+    }
+    .sgz-row {
+        gap: 0.3rem;
+    }
+    .sgz-btn {
+        min-width: calc(50% - 0.3rem);
+        font-size: 0.9rem;
+        padding: 0.8rem 0.3rem;
+    }
+    .sgz-table th, .sgz-table td {
+        font-size: 1rem;
+        padding: 0.8rem 0.4rem;
+    }
+    .sgz-table .price-large {
+        font-size: 1.25rem;
+    }
+    .sgz-table .strike {
+        font-size: 0.8em;
+    }
+    .sgz-table td small {
+        font-size: 0.8em;
+    }
+}
+
+/* =============================
+ANIMATIONS - STYLE SEMERARO
+============================= */
+.animate {
+  opacity: 0;
+}
+
+.animate.play {
+  animation: fadeIn 800ms ease-out forwards;
+}
+
+.fade_in.play {
+  animation: fadeIn 800ms ease-out forwards;
+}
+
+.fade_up.play {
+  animation: fadeUp 800ms ease-out 300ms forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    /**
+     * NOUVELLE FONCTION SIMPLIFIÉE POUR LES CARROUSELS
+     */
+    const initializeSlider = (containerSelector) => {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const slidesContainer = container.querySelector('.slides, .benefits-grid, .promo-grid');
+        const prevBtn = container.querySelector('.slider-arrow.prev');
+        const nextBtn = container.querySelector('.slider-arrow.next');
+
+        let currentIndex = 0;
+        let slides = [];
+        let autoPlayInterval = null;
+
+        const setup = () => {
+            const isBanner = container.classList.contains('banner-container');
+            const isMobileView = window.innerWidth <= 600;
+            const isResponsiveSlider = container.matches('#benefits') || container.matches('#promotions');
+
+            if (isResponsiveSlider && window.innerWidth > 768) {
+                if (slidesContainer.style.transform !== '') slidesContainer.style.transform = '';
+                if(prevBtn) prevBtn.style.display = 'none';
+                if(nextBtn) nextBtn.style.display = 'none';
+                return;
+            }
+
+            if (isBanner) {
+                Array.from(container.querySelectorAll('.slide')).forEach(s => s.style.display = 'none');
+                const selector = isMobileView ? '.slide-mobile' : '.slide-desktop';
+                slides = Array.from(slidesContainer.children).filter(child => child.matches(selector));
+                slides.forEach(s => s.style.display = 'flex');
+            } else {
+                slides = Array.from(slidesContainer.children);
+            }
+
+            if (slides.length <= 1) {
+                if(prevBtn) prevBtn.style.display = 'none';
+                if(nextBtn) nextBtn.style.display = 'none';
+            } else {
+                if(prevBtn) prevBtn.style.display = 'block';
+                if(nextBtn) nextBtn.style.display = 'block';
+            }
+
+            goToSlide(currentIndex, 'instant');
+            startAutoPlay();
+        };
+
+        const goToSlide = (index, mode = 'animate') => {
+            if (!slides || slides.length === 0) return;
+            currentIndex = (index + slides.length) % slides.length;
+
+            slidesContainer.style.transition = mode === 'instant' ? 'none' : 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
+
+        const startAutoPlay = () => {
+            const intervalTime = container.dataset.interval || 0;
+            clearInterval(autoPlayInterval);
+            if (intervalTime > 0) {
+                autoPlayInterval = setInterval(() => goToSlide(currentIndex + 1), intervalTime);
+            }
+        };
+
+        if(prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+                startAutoPlay();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+                startAutoPlay();
+            });
+        }
+
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(setup, 200);
+        });
+
+        if (container.classList.contains('banner-container')) {
+            container.dataset.interval = 5000;
+        }
+
+        setup();
+    };
+
+    initializeSlider('.banner-container');
+    initializeSlider('#benefits');
+    initializeSlider('#promotions');
+
+    /**
+     * SCRIPT POUR L'ACCORDÉON FAQ (SIMPLIFIÉ)
+     */
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        if (header) {
+            header.addEventListener('click', () => {
+                const content = item.querySelector('.accordion-content');
+                const isOpen = item.classList.toggle('open');
+                header.querySelector('span').textContent = isOpen ? '-' : '+';
+                content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : null;
+            });
+        }
+    });
+
+    /**
+     * SCRIPT POUR LE TABLEAU DE PRIX (RESTAURÉ ET FONCTIONNEL)
+     */
+    (function() {
+        const individualZonesData = { "Femme": { "Visage": { "Lèvre supérieure": { unit: 34 }, "Menton": { unit: 34 }, "Favoris": { unit: 34 }, "Nez + Narines": { unit: 45 }, "Nuque": { unit: 45 }, "Cou": { unit: 45 }, "Ovale visage": { unit: 56 }, "Visage complet": { unit: 89 }, "Visage + cou": { unit:123 } }, "Haut du corps": { "Aisselles": { unit: 45 }, "Haut des bras": { unit: 56 }, "Avant-bras + mains offertes": { unit: 78 }, "Mains": { unit: 34 }, "Doigts": { unit: 28 }, "Bras complet + mains offertes": { unit:123 }, "Épaules": { unit: 78 }, "Seins": { unit: 56 }, "Mamelons": { unit: 34 }, "Ligne abdominale": { unit: 34 }, "Ventre": { unit: 89 }, "Haut du dos": { unit: 78 }, "Bas du dos": { unit:112 }, "Dos complet": { unit:189 } }, "Maillot": { "Maillot classique": { unit: 56 }, "Maillot échancré": { unit: 78 }, "Maillot complet": { unit: 95 }, "SIF (sillon interfessier)":{ unit: 50 }, "Fesses": { unit: 89 } }, "Jambes": { "Demi-jambes": { unit:145 }, "Pieds": { unit: 45 }, "Orteils": { unit: 28 }, "Jambes complètes": { unit:278 }, "Cuisses": { unit:156 }, "Carré cuisse": { unit:100 } } }, "Homme": { "Visage": { "Contour barbe cou": { unit: 45 }, "Contour barbe joues": { unit: 45 }, "Contour barbe cou + joues":{ unit: 80 }, "Barbe complète": { unit:100 }, "Moustache": { unit: 45 }, "Col de chemise": { unit: 45 }, "Cou": { unit: 45 }, "Nuque": { unit: 45 }, "Oreilles": { unit: 45 }, "Nez + Narines": { unit: 45 }, "Visage complet": { unit:120 } }, "Haut du corps": { "Aisselles": { unit: 67 }, "Haut des bras": { unit: 84 }, "Avant-bras + mains offertes": { unit:112 }, "Mains": { unit: 45 }, "Doigts": { unit: 28 }, "Bras complet + mains offertes": { unit:167 }, "Épaules": { unit: 89 }, "Torse": { unit:123 }, "Ventre": { unit:112 }, "Bas du dos": { unit:112 }, "Haut du dos": { unit:112 }, "Dos complet": { unit:200 } }, "Maillot": { "Maillot complet": { unit:112 }, "Parties génitales": { unit: 89 }, "SIF (sillon interfessier)":{ unit: 56 }, "Fesses": { unit:112 } }, "Jambes": { "Orteils": { unit: 28 }, "Demi-jambes": { unit:223 }, "Jambes complètes": { unit:334 }, "Pieds": { unit: 45 }, "Cuisses": { unit:223 } } } };
+        const forfaitsData = { "Femme": { "__header_Forfaits Maillot": {}, "Maillot classique + Aisselles": { unit: 91 }, "Maillot échancré + Aisselles": { unit: 111 }, "Maillot complet + Aisselles": { unit: 126 }, "Maillot classique + SIF": { unit: 95 }, "Maillot échancré + SIF": { unit: 115 }, "Maillot complet + SIF": { unit: 131 }, "Fesses + SIF": { unit: 125 }, "Maillot classique + SIF + Aisselles": { unit: 128 }, "Maillot échancré + SIF + Aisselles": { unit: 147 }, "Maillot complet + SIF + Aisselles": { unit: 162 }, "__header_Forfaits 1/2 Jambes": {}, "1/2 jambes + Aisselles": { unit: 171 }, "1/2 jambes + Maillot classique": { unit: 181 }, "1/2 jambes + Maillot échancré": { unit: 201 }, "1/2 jambes + Maillot complet": { unit: 216 }, "1/2 jambes + Maillot classique + Aisselles": { unit: 218 }, "1/2 jambes + Maillot échancré + Aisselles": { unit: 236 }, "1/2 jambes + Maillot complet + Aisselles": { unit: 242 }, "__header_Forfaits Jambes Entières": {}, "Jambes complètes + Maillot classique": { unit: 301 }, "Jambes complètes + Maillot échancré": { unit: 320 }, "Jambes complètes + Maillot complet": { unit: 336 }, "Jambes complètes + Maillot classique + Aisselles": { unit: 322 }, "Jambes complètes + Maillot échancré + Aisselles": { unit: 341 }, "Jambes complètes + Maillot complet + Aisselles": { unit: 355 } }, "Homme": { "__header_Forfaits Visage": {}, "Visage complet (barbe+moustache+cou+nez)": { unit: 220 }, "Contour barbe cou + joues": { unit: 81 }, "__header_Forfaits Corps": {}, "Torse + Ventre": { unit: 212 }, "Épaules + Nuque": { unit: 121 }, "Haut du dos + Nuque": { unit: 141 }, "Haut du dos + Épaules": { unit: 181 }, "Dos complet + Épaules": { unit: 260 }, "Dos complet + Torse + Ventre": { unit: 455 }, "Dos complet + Épaules + Nuque": { unit: 284 }, "Dos complet + Épaules + Nuque + Haut du bras": { unit: 355 }, "Fesses + SIF": { unit: 151 }, "Maillot complet + SIF": { unit: 151 }, "Avant-bras + Mains": { unit: 141 }, "Bras entiers + Mains": { unit: 191 }, "Dos complet + Épaules + Torse + Ventre": { unit: 520 } } };
+        Object.values(individualZonesData).forEach(gender => { Object.values(gender).forEach(category => { Object.values(category).forEach(item => { if(item.unit) { item.total5 = item.unit * 5; item.total5disc = item.total5 * 0.75; item.per5 = item.total5disc / 5; item.total8 = item.unit * 8; item.total8disc = item.total8 * 0.65; item.per8 = item.total8disc / 8; } }); }); });
+        const sessionsAndForfait = ['À la séance', '5 séances (-25%)','8 séances (-35%)', 'Forfaits'];
+        const genders = ['Femme','Homme'];
+        let selOption = sessionsAndForfait[0], selGender = genders[0], selZone;
+        const sessEl = document.getElementById('sgz-sessions'), genEl = document.getElementById('sgz-genders'), zoneEl = document.getElementById('sgz-zones'), zoneLabel = document.getElementById('sgz-zones-label'), instEl = document.getElementById('sgz-installments'), tblEl = document.getElementById('sgz-table');
+        function makeBtns(container, items, selected, onSelect){ if (!container) return; container.innerHTML = ''; items.forEach(item => { const b = document.createElement('button'); b.innerText = item; b.className = 'sgz-btn'; if(item === selected) b.classList.add('selected'); b.onclick = () => { onSelect(item); }; container.appendChild(b); }); }
+        function makeZones(){ if (!zoneEl || !individualZonesData[selGender]) return; zoneEl.innerHTML = ''; const currentGenderZones = Object.keys(individualZonesData[selGender]); if (!selZone || !currentGenderZones.includes(selZone)) { selZone = currentGenderZones[0]; } currentGenderZones.forEach(z => { const b = document.createElement('button'); b.innerText = z; b.className = 'sgz-btn sgz-zone-btn'; if(z === selZone) b.classList.add('selected'); b.onclick = () => { selZone = z; update(); }; zoneEl.appendChild(b); }); }
+        function makeTable(){ let isForfaitMode = selOption === 'Forfaits', catData, tableTitle = 'Zones du corps'; if (isForfaitMode) { catData = forfaitsData[selGender] || {}; tableTitle = 'Forfaits Disponibles'; } else { catData = individualZonesData[selGender]?.[selZone] || {}; } if (!tblEl) return; tblEl.innerHTML = ''; const tHead = tblEl.createTHead(), headRow = tHead.insertRow(), thZone = document.createElement('th'); thZone.textContent = tableTitle; headRow.appendChild(thZone); const priceHeaderCell = document.createElement('th'); headRow.appendChild(priceHeaderCell); const tBody = tblEl.createTBody(); Object.entries(catData).forEach(([zoneName, vals]) => { if (zoneName.startsWith('__header_')) { const title = zoneName.replace('__header_', '').replace(/_/g, ' '), headerRow = tBody.insertRow(); headerRow.className = 'sgz-subheader'; const th = document.createElement('th'); th.colSpan = 2; th.textContent = title; headerRow.appendChild(th); return; } const tr = tBody.insertRow(); tr.insertCell().textContent = zoneName; const priceCell = tr.insertCell(); if (isForfaitMode) { priceHeaderCell.textContent = 'Prix à la séance'; priceCell.innerHTML = `<span class="price-small">${vals.unit !== undefined ? vals.unit : 'N/A'} €</span>`; } else { if (selOption === sessionsAndForfait[0]) { priceHeaderCell.textContent = 'Prix à la séance'; priceCell.innerHTML = `<span class="price-small">${vals.unit !== undefined ? vals.unit : 'N/A'} €</span>`; } else if (selOption === sessionsAndForfait[1]) { priceHeaderCell.textContent = 'Pack 5 séances (-25%)'; const perSessionText5 = vals.per5 !== undefined ? vals.per5.toFixed(2).replace('.',',') : 'N/A'; priceCell.innerHTML = `<span class="strike">${vals.total5 !== undefined ? vals.total5 : 'N/A'} €</span> <span class="price-large">${vals.total5disc !== undefined ? vals.total5disc.toFixed(2).replace('.', ',') : 'N/A'} €</span><small>(${perSessionText5} €/séance)</small>`; } else if (selOption === sessionsAndForfait[2]) { priceHeaderCell.textContent = 'Pack 8 séances (-35%)'; const perSessionText8 = vals.per8 !== undefined ? vals.per8.toFixed(2).replace('.',',') : 'N/A'; priceCell.innerHTML = `<span class="strike">${vals.total8 !== undefined ? vals.total8 : 'N/A'} €</span> <span class="price-large">${vals.total8disc !== undefined ? vals.total8disc.toFixed(2).replace('.', ',') : 'N/A'} €</span><small>(${perSessionText8} €/séance)</small>`; } } }); }
+        function update(){ makeBtns(sessEl, sessionsAndForfait, selOption, v => { selOption = v; if (v !== 'Forfaits' && !selZone) { selZone = Object.keys(individualZonesData[selGender])[0]; } update(); }); if (selOption === 'Forfaits') { if(zoneEl) zoneEl.style.display = 'none'; if(zoneLabel) zoneLabel.style.display = 'none'; if(instEl) instEl.textContent = ''; } else { if(zoneEl) zoneEl.style.display = 'flex'; if(zoneLabel) zoneLabel.style.display = 'block'; makeZones(); if(instEl) { if (selOption === sessionsAndForfait[1] || selOption === sessionsAndForfait[2]) { instEl.textContent = '💳 Paiement possible en 2 ou 3 fois sans frais.'; } else { instEl.textContent = ' '; } } } makeBtns(genEl, genders, selGender, v => { selGender = v; selZone = Object.keys(individualZonesData[selGender])[0]; update(); }); makeTable(); }
+        if (sessEl) { update(); }
+    })();
+
+});
+</script>
