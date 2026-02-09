@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CriticalCSS from '../components/CriticalCSS.astro';
 
 interface Props {
   title: string;
@@ -25,6 +26,9 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Critical CSS inline for instant above-the-fold render -->
+  <CriticalCSS />
   
   <!-- SEO Meta Tags -->
   <title>{title}</title>
@@ -65,14 +69,16 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
   <!-- Preconnect pour performances -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.trustindex.io" />
 
   <!-- Google Fonts with display=swap for better performance -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@300;400;500;600;700;800&display=swap" media="print" id="google-fonts" />
 
   <!-- Preload critical resources -->
-  <link rel="preload" href="/images/logo-banner-white.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="/images/logo-banner-white.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+  <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
 
-  <!-- Trustindex Widget -->
+  <!-- Trustindex Widget - deferred for performance -->
   <script type="text/javascript" src="https://cdn.trustindex.io/loader.js" defer></script>
 
   <!-- Generator pour Analytics -->
