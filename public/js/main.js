@@ -1,3 +1,11 @@
+// Load Google Fonts async
+const googleFonts = document.getElementById('google-fonts');
+if (googleFonts) {
+  googleFonts.addEventListener('load', function() {
+    this.media = 'all';
+  });
+}
+
 // All initialization in single DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   // Animation d'ouverture au chargement - Semeraro Style
