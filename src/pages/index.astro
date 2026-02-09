@@ -497,9 +497,9 @@ const t = translations[lang];
   }
 
   @keyframes banner_logo {
-    0% { transform: translateY(0); }
-    88% { transform: translateY(0); }
-    100% { transform: translateY(40px); }
+    0% { transform: translate(-50%, -50%); }
+    88% { transform: translate(-50%, -50%); }
+    100% { transform: translate(-50%, calc(-50% + 40px)); }
   }
 
   @keyframes banner_logo_black {
@@ -602,7 +602,7 @@ const t = translations[lang];
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, calc(-50% + 40px));
+    transform: translate(-50%, -50%);
     z-index: 10;
   }
 
