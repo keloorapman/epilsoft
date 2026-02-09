@@ -25,16 +25,18 @@ const t = translations[lang];
           <div class="video-container">
             <iframe
               src="https://www.youtube.com/embed/Ye6ZwYE5CSM?autoplay=1&mute=1&loop=1&playlist=Ye6ZwYE5CSM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              title="Présentation Epilsoft - Centre d'épilation laser"
               frameborder="0"
               allow="autoplay; encrypted-media"
               allowfullscreen
+              loading="lazy"
             ></iframe>
           </div>
           <div class="video-overlay"></div>
         </div>
         <div class="logo">
-          <img src="/images/logo-banner-white.svg" alt="Epilsoft" />
-          <img src="/images/logo-banner-black.svg" alt="Epilsoft" class="black" />
+          <img src="/images/logo-banner-white.svg" alt="Epilsoft" width="400" height="100" />
+          <img src="/images/logo-banner-black.svg" alt="Epilsoft" class="black" width="400" height="100" />
         </div>
         <div class="banner-cta">
           <a href="/contact" class="btn-reservation" title="Prendre rendez-vous">
@@ -78,7 +80,7 @@ const t = translations[lang];
           <!-- Slider photos -->
           <div class="slider">
             <div class="item">
-              <img src="/images/centres-epilation-laser-Bruxelles.jpg" alt="Centres Epilsoft Bruxelles" />
+              <img src="/images/centres-epilation-laser-Bruxelles.jpg" alt="Centres Epilsoft Bruxelles" width="1064" height="864" />
             </div>
           </div>
 
@@ -205,7 +207,7 @@ const t = translations[lang];
               <!-- Laser Candela -->
               <div class="tech-item animate fade_up">
                 <div class="tech-image">
-                  <img src="/images/laser-Candela-epilation-laser.webp" alt="Laser Candela Gentlease" />
+                  <img src="/images/laser-Candela-epilation-laser.webp" alt="Laser Candela Gentlease" width="600" height="634" />
                 </div>
                 <div class="tech-content">
                   <h3 class="tech-title">Laser Candela</h3>
@@ -217,7 +219,7 @@ const t = translations[lang];
               <!-- Laser Alexandrite -->
               <div class="tech-item animate fade_up">
                 <div class="tech-image">
-                  <img src="/images/laser-diode.jpg" alt="Laser Alexandrite" />
+                  <img src="/images/laser-diode.jpg" alt="Laser Alexandrite" width="800" height="600" />
                 </div>
                 <div class="tech-content">
                   <h3 class="tech-title">Laser Alexandrite</h3>
@@ -229,7 +231,7 @@ const t = translations[lang];
               <!-- Laser Nd Yag -->
               <div class="tech-item animate fade_up">
                 <div class="tech-image">
-                  <img src="/images/laser-ndyag.jpg" alt="Laser Nd Yag" />
+                  <img src="/images/laser-ndyag.jpg" alt="Laser Nd Yag" width="800" height="600" />
                 </div>
                 <div class="tech-content">
                   <h3 class="tech-title">Laser Nd Yag</h3>
@@ -246,9 +248,9 @@ const t = translations[lang];
 
           <!-- Indicateurs (mobile/tablet only) -->
           <div class="tech-carousel-indicators">
-            <button class="tech-indicator active" data-index="0"></button>
-            <button class="tech-indicator" data-index="1"></button>
-            <button class="tech-indicator" data-index="2"></button>
+            <button class="tech-indicator active" data-index="0" aria-label="Afficher laser Candela"></button>
+            <button class="tech-indicator" data-index="1" aria-label="Afficher laser Alexandrite"></button>
+            <button class="tech-indicator" data-index="2" aria-label="Afficher laser Nd Yag"></button>
           </div>
         </div>
 
@@ -261,7 +263,7 @@ const t = translations[lang];
       <div class="wrapper section-treatment">
         <div class="photo_texte coloration">
           <div class="photo">
-            <img src="/images/epilation-laser-visage-avant-apres-.webp" alt="Épilation laser visage avant après" />
+            <img src="/images/epilation-laser-visage-avant-apres-.webp" alt="Épilation laser visage avant après" width="1024" height="1536" />
           </div>
           <div class="bloc_shadow">
             <div class="animate fade_in">
@@ -385,12 +387,12 @@ const t = translations[lang];
 
           <!-- Indicateurs -->
           <div class="carousel-indicators">
-            <button class="indicator active" data-index="0"></button>
-            <button class="indicator" data-index="1"></button>
-            <button class="indicator" data-index="2"></button>
-            <button class="indicator" data-index="3"></button>
-            <button class="indicator" data-index="4"></button>
-            <button class="indicator" data-index="5"></button>
+            <button class="indicator active" data-index="0" aria-label="Afficher témoignage 1"></button>
+            <button class="indicator" data-index="1" aria-label="Afficher témoignage 2"></button>
+            <button class="indicator" data-index="2" aria-label="Afficher témoignage 3"></button>
+            <button class="indicator" data-index="3" aria-label="Afficher témoignage 4"></button>
+            <button class="indicator" data-index="4" aria-label="Afficher témoignage 5"></button>
+            <button class="indicator" data-index="5" aria-label="Afficher témoignage 6"></button>
           </div>
         </div>
       </div>
